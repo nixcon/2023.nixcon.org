@@ -19,6 +19,9 @@ module.exports = {
           950: "#0D1424",
         },
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],

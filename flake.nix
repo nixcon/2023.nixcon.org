@@ -16,7 +16,7 @@
       packages.default = pkgs.buildNpmPackage {
         name = "nixcon-2023";
         src = ./.;
-        npmDepsHash = "sha256-tnNSFGorf/jHgjmb+Cozg5jJQBt6y9gEIBuhW9jcolk=";
+        npmDepsHash = "sha256-KegUJItyeaevVtnUR2sheuu1C8XqGWLy9t9oP4O+cis=";
         installPhase = ''
           mkdir -p $out
           cp -a ./dist/. $out

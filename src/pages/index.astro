@@ -1,4 +1,9 @@
 ---
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import SectionParagraph from "../components/SectionParagraph.astro";
+import "@fontsource/roboto";
 ---
 
 <html lang="en">
@@ -6,8 +11,7 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>NixCon 2023</title>
   </head>
   <body class="bg-nixblue-100 text-nixblue-950">
     <div class="flex flex-col items-center justify-center h-screen">
@@ -16,9 +20,9 @@
         Darmstadt | September 08 - 10
       </p>
     </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">The Conference</h2>
-      <p class="text-gray-600 leading-8 text-lg">
+    <Section>
+      <SectionHeading>The Conference</SectionHeading>
+      <SectionParagraph>
         NixCon is a community-oriented conference for contributors and users of
         Nix and NixOS. It's about sharing experiences, inspiring people and
         discussing future development. We would like to learn about how you use
@@ -26,26 +30,51 @@
         on. The growth of NixOS as a project brings its own challenges and we
         would like to know how you think the user experience can be improved and
         how NixOS can be scaled.
-      </p>
-    </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">The Location</h2>
-      <p class="text-gray-600 leading-8 text-lg">
+      </SectionParagraph>
+    </Section>
+    <Section>
+      <SectionHeading>The Location</SectionHeading>
+      <SectionParagraph>
         Darmstadt is a city in the state of Hesse in Germany, located in the
         southern part of the Rhine-Main-Area (Frankfurt Metropolitan Region).
-      </p>
-    </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">The Schedule</h2>
-    </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">The Sponsors</h2>
-    </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">Tickets</h2>
-    </div>
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-black text-gray-700 mb-2">Get in touch</h2>
-    </div>
+      </SectionParagraph>
+    </Section>
+    <Section>
+      <SectionHeading>The Schedule</SectionHeading>
+      <SectionParagraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellat
+        esse debitis eius non eaque cumque itaque nobis expedita nisi,
+        recusandae mollitia facere fugiat assumenda temporibus nemo fugit est
+        commodi?
+      </SectionParagraph>
+    </Section>
+    <Section>
+      <SectionHeading>The Sponsors</SectionHeading>
+      <SectionParagraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellat
+        esse debitis eius non eaque cumque itaque nobis expedita nisi,
+        recusandae mollitia facere fugiat assumenda temporibus nemo fugit est
+        commodi?
+      </SectionParagraph>
+    </Section>
+    <Section>
+      <SectionHeading>Tickets</SectionHeading>
+      <SectionParagraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellat
+        esse debitis eius non eaque cumque itaque nobis expedita nisi,
+        recusandae mollitia facere fugiat assumenda temporibus nemo fugit est
+        commodi?
+      </SectionParagraph>
+    </Section>
+    <Section>
+      <SectionHeading>Get in touch</SectionHeading>
+      <SectionParagraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellat
+        esse debitis eius non eaque cumque itaque nobis expedita nisi,
+        recusandae mollitia facere fugiat assumenda temporibus nemo fugit est
+        commodi?
+      </SectionParagraph>
+    </Section>
+    <Footer />
   </body>
 </html>
