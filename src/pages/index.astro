@@ -4,6 +4,11 @@ import Section from "../components/Section.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SectionParagraph from "../components/SectionParagraph.astro";
 import "@fontsource/roboto";
+
+const res = await fetch(
+  "https://talks.nixcon.org/api/events/nixcon-2022/talks/"
+);
+const data = await res.json();
 ---
 
 <html lang="en">
@@ -42,10 +47,14 @@ import "@fontsource/roboto";
     <Section>
       <SectionHeading>The Schedule</SectionHeading>
       <SectionParagraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellat
-        esse debitis eius non eaque cumque itaque nobis expedita nisi,
-        recusandae mollitia facere fugiat assumenda temporibus nemo fugit est
-        commodi?
+        {
+          data.results.map((talk: any) => (
+            <div class="flex flex-col items-start justify-start p-4 my-4 bg-white rounded-lg shadow-lg">
+              <h2 class="text-2xl font-bold text-gray-700">{talk.title}</h2>
+              <p class="mt-2 text-gray-600">{talk.abstract}</p>
+            </div>
+          ))
+        }
       </SectionParagraph>
     </Section>
     <Section>
