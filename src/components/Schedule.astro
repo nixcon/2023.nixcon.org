@@ -1,0 +1,17 @@
+---
+var data = { results: [] };
+
+if (!process.env["NIX_BUILD_TOP"]) {
+  const res = await fetch(
+    "https://talks.nixcon.org/api/events/nixcon-2022/talks/"
+  );
+  data = await res.json();
+}
+---
+
+data.results.map((talk: any) => (<div
+  class="flex flex-col items-start justify-start p-4 my-4 bg-white rounded-lg shadow-lg"
+>
+  <h2 class="text-2xl font-bold text-gray-700">{talk.title}</h2>
+  <p class="mt-2 text-gray-600">{talk.abstract}</p>
+</div>))

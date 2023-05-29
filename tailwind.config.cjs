@@ -21,8 +21,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
+        behrensschrift: ["Behrensschrift", "serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

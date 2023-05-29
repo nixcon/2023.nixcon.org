@@ -1,0 +1,26 @@
+---
+import "@fontsource/roboto";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NixCon 2023</title>
+    <style>
+      @font-face {
+        font-family: "Behrensschrift";
+        src: url("/fonts/Behrensschrift-SH.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+  <body class="bg-nixblue-100 text-nixblue-950">
+    <slot />
+    <Footer />
+  </body>
+</html>
