@@ -5,10 +5,15 @@ import SectionHeading from "../components/SectionHeading.astro";
 import SectionParagraph from "../components/SectionParagraph.astro";
 import "@fontsource/roboto";
 
-const res = await fetch(
-  "https://talks.nixcon.org/api/events/nixcon-2022/talks/"
-);
-const data = await res.json();
+var data = {'results': []};
+
+if (!process.env['NIX_BUILD_TOP']) {
+
+    const res = await fetch(
+    "https://talks.nixcon.org/api/events/nixcon-2022/talks/"
+    );
+    data = await res.json();
+}
 ---
 
 <html lang="en">
