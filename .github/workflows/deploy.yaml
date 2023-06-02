@@ -16,11 +16,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - uses: cachix/install-nix-action@v17
+      - uses: cachix/install-nix-action@v20
 
       - name: Build
         run: |
-          nix blid
+          nix build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
