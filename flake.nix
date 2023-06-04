@@ -32,7 +32,10 @@
         src = ./.;
 
         preBuild = "export HOME=$(pwd)";
-        installPhase = "cp -rv dist $out";
+        installPhase = ''
+          cp -rv dist $out
+          touch $out/.nojekyll
+        '';
       };
     });
 }
