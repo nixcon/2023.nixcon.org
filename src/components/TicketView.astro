@@ -22,14 +22,18 @@ let ticket_data = await ticket_data_request.json();
         .sort((a, b) => a.position - b.position)
         .filter((ticket) => ticket.active)
         .map((ticket) => (
-          <div class="tickes">
-            <div class="p-4 bg-nixblue-200">
+          <div>
+            <div class="p-4 bg-nixblue-200 flex gap-1 flex-col">
               <h3 class="text-xl font-bold">{ticket.name.en}</h3>
-              <p>
-                <small>{ticket.admission ? " (grants Admission)" : ""}</small>
-                <small>{ticket.personalized ? " (personalized)" : ""}</small>
-              </p>
               <SectionParagraph>{ticket.description.en}</SectionParagraph>
+              <p class="flex gap-2">
+                <small class="bg-nixblue-100 inline-block p-1 rounded">
+                  {ticket.admission ? " (grants Admission)" : ""}
+                </small>
+                <small class="bg-nixblue-100 inline-block p-1 rounded">
+                  {ticket.personalized ? " (personalized)" : ""}
+                </small>
+              </p>
             </div>
             <a
               href="https://tickets.nixcon.org/2023/"
