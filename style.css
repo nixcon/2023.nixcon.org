@@ -11,4 +11,12 @@
         text-decoration: underline solid 2px;
         @apply text-nixblue-800;
     }
+
+    .linklist {
+        @apply flex md:flex-row flex-wrap gap-4 mb-4 ;
+    }
+    .linklist a {
+        @apply hover:underline py-2 px-4 border-2 border-nixblue-800 bg-nixblue-50 font-bold hover:bg-nixblue-200;
+
+    }
 }
