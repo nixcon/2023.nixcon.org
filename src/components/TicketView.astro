@@ -16,19 +16,32 @@ let ticket_data = await ticket_data_request.json();
 
 <Section>
   <SectionHeading>Tickets</SectionHeading>
-  <div class="flex flex-col justify-center gap-4">
+  <div class="flex flex-col justify-center gap-4 pt-1">
     {
-      ticket_data.results.map((ticket) => (
-        <div class="tickes">
-          <div class="p-4 bg-nixblue-200">
-            <h3 class="text-xl font-bold">{ticket.name.en}</h3>
-            <SectionParagraph>{ticket.description.en}</SectionParagraph>
+      ticket_data.results
+        .sort((a, b) => a.position - b.position)
+        .filter((ticket) => ticket.active)
+        .map((ticket) => (
+          <div class="tickes">
+            <div class="p-4 bg-nixblue-200">
+              <h3 class="text-xl font-bold">{ticket.name.en}</h3>
+              <p>
+                <small>{ticket.admission ? " (grants Admission)" : ""}</small>
+                <small>{ticket.personalized ? " (personalized)" : ""}</small>
+              </p>
+              <SectionParagraph>{ticket.description.en}</SectionParagraph>
+            </div>
+            <a
+              href="https://tickets.nixcon.org/2023/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block p-4 bg-nixblue-300 text-right font-bold hover:bg-nixblue-400 transition-all"
+            >
+              Buy {ticket.free_price ? "starting at" : "for"}{" "}
+              {ticket.default_price} € &#187;
+            </a>
           </div>
-          <div class="p-4 bg-nixblue-300 text-right">
-            <p class="font-black text-lg">Buy for {ticket.default_price} €</p>
-          </div>
-        </div>
-      ))
+        ))
     }
   </div>
 </Section>
