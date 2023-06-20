@@ -16,7 +16,7 @@
         @apply flex md:flex-row flex-wrap gap-4 mb-4 ;
     }
     .linklist a {
-        @apply hover:underline py-2 px-4 border-2 border-nixblue-800 bg-nixblue-50 font-bold hover:bg-nixblue-200;
+        @apply no-underline hover:underline py-2 px-4 border-2 border-nixblue-800 font-bold;
 
     }
 }
