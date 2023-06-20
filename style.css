@@ -1,0 +1,14 @@
+@tailwind base;
+
+@layer base {
+    a:any-link, a:visited {
+        font-weight: 800;
+        @apply text-nixblue-600;
+    }
+    
+    a:hover {
+        font-weight: 800;
+        text-decoration: underline solid 2px;
+        @apply text-nixblue-800;
+    }
+}
