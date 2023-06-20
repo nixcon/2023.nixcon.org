@@ -1,0 +1,34 @@
+---
+import Section from "./Section.astro";
+import SectionHeading from "./SectionHeading.astro";
+import SectionParagraph from "./SectionParagraph.astro";
+
+let ticket_data_request = await fetch(
+  "https://pretix.eu/api/v1/organizers/nixcon/events/2023/items/",
+  {
+    headers: {
+      Authorization: `Token ${import.meta.env.PRETIX_TOKEN}`,
+    },
+  }
+);
+let ticket_data = await ticket_data_request.json();
+---
+
+<Section>
+  <SectionHeading>Tickets</SectionHeading>
+  <div class="flex flex-col justify-center gap-4">
+    {
+      ticket_data.results.map((ticket) => (
+        <div class="tickes">
+          <div class="p-4 bg-nixblue-200">
+            <h3 class="text-xl font-bold">{ticket.name.en}</h3>
+            <SectionParagraph>{ticket.description.en}</SectionParagraph>
+          </div>
+          <div class="p-4 bg-nixblue-300 text-right">
+            <p class="font-black text-lg">Buy for {ticket.default_price} €</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Section>
