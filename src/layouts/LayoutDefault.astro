@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import './../style.css';
 ---
 
-<html lang="en">
+<html lang="en" class="frame">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,7 +21,27 @@ import './../style.css';
     </style>
   </head>
   <body class="bg-nixblue-100 text-nixblue-950">
-    <slot />
-    <Footer />
+    <div class="hidden md:flex flex-col items-center justify-center mt-32">
+      <img src="/logo.svg" alt="NixCon 2023" class="w-96" />
+      <p class="mt-4 text-5xl font-bold text-gray-600 font-behrensschrift">
+        Darmstadt 2023
+      </p>
+      <p class="text-3xl font-behrensschrift font-bold text-gray-600">
+        September 08 - 10
+      </p>
+    </div>
+    <div class="content md:content-large">
+      <div class="flex md:hidden flex-col items-center justify-center text-center mt-10">
+        <img src="/logo.svg" alt="NixCon 2023" class="w-72" />
+        <p class="mt-4 text-5xl font-bold text-gray-600 font-behrensschrift">
+          Darmstadt 2023
+        </p>
+        <p class="text-3xl font-behrensschrift font-bold text-gray-600">
+          September 08 - 10
+        </p>
+      </div>
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
