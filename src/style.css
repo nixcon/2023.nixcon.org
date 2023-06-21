@@ -22,17 +22,17 @@
     @apply no-underline block hover:underline py-2 px-4 border-2 border-nixblue-800 font-bold bg-nixblue-50;
   }
 
-  .frame  {
+  .frame {
     height: 100vh;
     width: 100vw;
-    border-image-source: url(./site_frame.svg);
+    border-image-source: url("/site_frame.svg");
     border-image-slice: 33.2% 46.9% 33.28%;
     border-image-width: 33vw;
     border-image-repeat: stretch round;
     position: absolute;
   }
 
-  .content  {
+  .content {
     position: absolute;
     width: 100vw;
     bottom: 7rem;
@@ -40,7 +40,7 @@
     padding: 0 15vw;
     overflow: scroll;
     mask-image: linear-gradient(
-      to bottom, 
+      to bottom,
       transparent,
       black 5%,
       black 95%,
@@ -51,7 +51,7 @@
   .content-large {
     height: calc(100vh - 45em);
     mask-image: linear-gradient(
-      to bottom, 
+      to bottom,
       transparent,
       black 0.5%,
       black 99.5%,
