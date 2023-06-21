@@ -2,6 +2,8 @@
 import "@fontsource/roboto";
 import Section from "../components/Section.astro";
 import SectionHeading from "../components/SectionHeading.astro";
+import SectionParagraph from "../components/SectionParagraph.astro";
+import SubSectionHeading from "../components/SubSectionHeading.astro";
 import LayoutDefault from "../layouts/LayoutDefault.astro";
 ---
 
@@ -18,35 +20,90 @@ import LayoutDefault from "../layouts/LayoutDefault.astro";
 
   <Section>
     <SectionHeading>About</SectionHeading>
-    <p>
+    <SectionParagraph>
       NixCon is a community-oriented conference for contributors and users of
       Nix and NixOS. It's about sharing experiences, inspiring people and
       discussing future development.
-    </p>
-    <p>
+    </SectionParagraph>
+    <SectionParagraph>
       We would like to learn about how you use Nix and NixOS in your
       organization and what you are currently working on.
-    </p>
-    <p>
+    </SectionParagraph>
+    <SectionParagraph>
       The growth of NixOS as a project brings its own challenges and we would
       like to know how you think the user experience can be improved and how
       NixOS can be scaled.
-    </p>
+    </SectionParagraph>
   </Section>
 
   <Section>
     <SectionHeading>Location</SectionHeading>
+    <SectionParagraph>
       <b class="inline-block mb-2">TU-Darmstadt, S1|05 Machinenhaus</b><br />
       Magdalenenstr. 12<br />
-      64289 Darmstadt,<br />
+      64289 Darmstadt<br />
       Germany
-    <p>
-	<a href="https://www.openstreetmap.org/way/26931271#map=19/49.87717/8.65750&layers=N"
-	rel="external">OpenStreetMap</a>
-	<a href="https://goo.gl/maps/nBg35Hk9FEeNuzAd7"
-	rel="external">Google Maps</a>
-	<a href="https://maps.apple.com/place?address=Darmstadt,%20Hesse,%20Germany&auid=3032624567994665273&ll=49.877144,8.657540&lsp=9902&q=S1%7C05%20Maschinenhaus&t=h"
-	rel="external">Apple Maps</a>
-     </p>
+    </SectionParagraph>
+    <ul class="linklist">
+      <li>
+        <a
+          href="https://www.openstreetmap.org/way/26931271#map=19/49.87717/8.65750&layers=N"
+          rel="external">OpenStreetMap</a
+        >
+      </li>
+      <li>
+        <a href="https://goo.gl/maps/nBg35Hk9FEeNuzAd7" rel="external"
+          >Google Maps</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://maps.apple.com/place?address=Darmstadt,%20Hesse,%20Germany&auid=3032624567994665273&ll=49.877144,8.657540&lsp=9902&q=S1%7C05%20Maschinenhaus&t=h"
+          rel="external">Apple Maps</a
+        >
+      </li>
+    </ul>
+  </Section>
+
+  <Section>
+    <SectionHeading>Timeline</SectionHeading>
+    <SectionParagraph>
+      NixCon 2023 will consist of two conference days and a self-organized
+      hackday. This event is organized by the community for the community:
+      everyone is welcome to contribute.
+    </SectionParagraph>
+
+    <SubSectionHeading>2023-08-10: Call for Papers deadline</SubSectionHeading>
+    <SectionParagraph>
+      You are encouraged to submit talks that cover the Nixpkgs ecosystem and
+      beyond.
+    </SectionParagraph>
+    <SectionParagraph>
+      We are currently planning for regular talks as well as lightning talks. If
+      you have another idea, like setting up a workshop, please contact us at
+      <a href="mailto:orgateam@nixcon.org">orgateam@nixcon.org</a>.
+    </SectionParagraph>
+    <SectionParagraph>
+      You can <a href="https://talks.nixcon.org/nixcon-2023/cfp">
+        submit your talk proposals via Pretalx</a
+      > until the deadline, 2023-08-10 23:00 UTC.
+    </SectionParagraph>
+
+    <SubSectionHeading>
+      2023-09-08: Conference day 1<br />2023-09-09: Conference day 2
+    </SubSectionHeading>
+    <SectionParagraph>
+      The official conference schedule will be published after reviewing the CfP
+      entries.
+    </SectionParagraph>
+
+    <SubSectionHeading>2023-09-10: Hackday</SubSectionHeading>
+    <SectionParagraph>
+      The Hackday is a self-organizing event after the conference. It's an
+      opportunity to network, hack on projects and ideas that arose during the
+      conference, and discuss plans for the rest of the year.
+      <br />
+      Get together, solve problems, create!
+    </SectionParagraph>
   </Section>
 </LayoutDefault>
