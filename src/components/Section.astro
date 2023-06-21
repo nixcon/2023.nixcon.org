@@ -1,5 +1,5 @@
 ---
-const {extraClasses} = Astro.props;
+const { extraClasses } = Astro.props;
 ---
 
 <section class=`${extraClasses} py-2`>
@@ -7,3 +7,8 @@ const {extraClasses} = Astro.props;
     <slot />
   </div>
 </section>
+
+<img src="./separator.svg"
+  aria-hidden="true"
+  class="w-full md:max-w-[50em] mx-auto mt-4 mb-8"
+/>
