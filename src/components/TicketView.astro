@@ -2,16 +2,23 @@
 import Section from "./Section.astro";
 import SectionHeading from "./SectionHeading.astro";
 import SectionParagraph from "./SectionParagraph.astro";
+import data from "./../../data/tickets.json";
 
-let ticket_data_request = await fetch(
-  "https://pretix.eu/api/v1/organizers/nixcon/events/2023/items/",
-  {
-    headers: {
-      Authorization: `Token ${import.meta.env.PRETIX_TOKEN}`,
-    },
-  }
-);
-let ticket_data = await ticket_data_request.json();
+let ticket_data = null;
+
+if (!process.env["NIX_BUILD_TOP"]) {
+  let ticket_data_request = await fetch(
+    "https://pretix.eu/api/v1/organizers/nixcon/events/2023/items/",
+    {
+      headers: {
+        Authorization: `Token ${import.meta.env.PRETIX_TOKEN}`,
+      },
+    }
+  );
+  ticket_data = await ticket_data_request.json();
+} else {
+  ticket_data = data;
+}
 ---
 
 <Section>
@@ -27,12 +34,16 @@ let ticket_data = await ticket_data_request.json();
               <h3 class="text-xl font-bold">{ticket.name.en}</h3>
               <SectionParagraph>{ticket.description.en}</SectionParagraph>
               <p class="flex gap-2">
-                <small class="bg-nixblue-100 inline-block p-1 rounded">
-                  {ticket.admission ? " (grants Admission)" : ""}
-                </small>
-                <small class="bg-nixblue-100 inline-block p-1 rounded">
-                  {ticket.personalized ? " (personalized)" : ""}
-                </small>
+                {ticket.admission ? (
+                  <small class="bg-nixblue-100 inline-block p-1 rounded">
+                    grants Admission
+                  </small>
+                ) : null}
+                {ticket.personalized ? (
+                  <small class="bg-nixblue-100 inline-block p-1 rounded">
+                    personalized
+                  </small>
+                ) : null}
               </p>
             </div>
             <a
