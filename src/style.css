@@ -35,26 +35,15 @@
   .content {
     position: absolute;
     width: 100vw;
-    bottom: 7rem;
-    height: calc(100vh - 15em);
-    padding: 0 15vw;
+    bottom: 5vh;
+    height:87vh;
+    padding: 0 12vw;
     overflow: scroll;
     mask-image: linear-gradient(
       to bottom,
       transparent,
       black 5%,
       black 95%,
-      transparent 100%
-    );
-  }
-
-  .content-large {
-    height: calc(100vh - 45em);
-    mask-image: linear-gradient(
-      to bottom,
-      transparent,
-      black 0.5%,
-      black 99.5%,
       transparent 100%
     );
   }
