@@ -28,27 +28,36 @@ if (!process.env["NIX_BUILD_TOP"]) {
       .filter((ticket) => ticket.active)
       .map((ticket) => (
         <div>
-          <div class="p-4 bg-nixblue-200 flex gap-1 flex-col">
+          <div class="p-4 border-2 border-nixblue-900 flex gap-1 flex-col">
             <h3 class="text-xl font-bold">{ticket.name.en}</h3>
-            <SectionParagraph>{ticket.description.en}</SectionParagraph>
-            <p class="flex gap-2">
-              {ticket.admission ? (
-                <small class="bg-nixblue-100 inline-block p-1 rounded">
-                  grants Admission
-                </small>
-              ) : null}
-              {ticket.personalized ? (
-                <small class="bg-nixblue-100 inline-block p-1 rounded">
-                  personalized
-                </small>
-              ) : null}
-            </p>
+            <SectionParagraph noMb={true}>
+              {ticket.description.en}
+            </SectionParagraph>
+            {ticket.personalized || ticket.admission ? (
+              <p class="flex gap-2 mt-2">
+                {ticket.admission ? (
+                  <small class="bg-nixblue-200 inline-block p-1 rounded">
+                    grants Admission
+                  </small>
+                ) : null}
+                {ticket.personalized ? (
+                  <small class="bg-nixblue-200 inline-block p-1 rounded">
+                    personalized
+                  </small>
+                ) : null}
+              </p>
+            ) : null}
           </div>
           <a
             href="https://tickets.nixcon.org/2023/"
             target="_blank"
             rel="noopener noreferrer"
-            class="block p-4 bg-nixblue-300 text-right font-bold hover:bg-nixblue-400 transition-all"
+            class="block p-4
+            border-b-2 border-nixblue-900
+            border-l-2 border-nixblue-900
+            border-r-2 border-nixblue-900
+            bg-nixblue-200
+            text-right font-bold hover:bg-nixblue-300 transition-all"
           >
             Buy {ticket.free_price ? "starting at" : "for"}{" "}
             {ticket.default_price} € &#187;
