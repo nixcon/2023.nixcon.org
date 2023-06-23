@@ -21,42 +21,39 @@ if (!process.env["NIX_BUILD_TOP"]) {
 }
 ---
 
-<Section>
-  <SectionHeading>Tickets</SectionHeading>
-  <div class="flex flex-col justify-center gap-4 pt-1">
-    {
-      ticket_data.results
-        .sort((a, b) => a.position - b.position)
-        .filter((ticket) => ticket.active)
-        .map((ticket) => (
-          <div>
-            <div class="p-4 bg-nixblue-200 flex gap-1 flex-col">
-              <h3 class="text-xl font-bold">{ticket.name.en}</h3>
-              <SectionParagraph>{ticket.description.en}</SectionParagraph>
-              <p class="flex gap-2">
-                {ticket.admission ? (
-                  <small class="bg-nixblue-100 inline-block p-1 rounded">
-                    grants Admission
-                  </small>
-                ) : null}
-                {ticket.personalized ? (
-                  <small class="bg-nixblue-100 inline-block p-1 rounded">
-                    personalized
-                  </small>
-                ) : null}
-              </p>
-            </div>
-            <a
-              href="https://tickets.nixcon.org/2023/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block p-4 bg-nixblue-300 text-right font-bold hover:bg-nixblue-400 transition-all"
-            >
-              Buy {ticket.free_price ? "starting at" : "for"}{" "}
-              {ticket.default_price} € &#187;
-            </a>
+<div class="flex flex-col justify-center gap-4 pt-1">
+  {
+    ticket_data.results
+      .sort((a, b) => a.position - b.position)
+      .filter((ticket) => ticket.active)
+      .map((ticket) => (
+        <div>
+          <div class="p-4 bg-nixblue-200 flex gap-1 flex-col">
+            <h3 class="text-xl font-bold">{ticket.name.en}</h3>
+            <SectionParagraph>{ticket.description.en}</SectionParagraph>
+            <p class="flex gap-2">
+              {ticket.admission ? (
+                <small class="bg-nixblue-100 inline-block p-1 rounded">
+                  grants Admission
+                </small>
+              ) : null}
+              {ticket.personalized ? (
+                <small class="bg-nixblue-100 inline-block p-1 rounded">
+                  personalized
+                </small>
+              ) : null}
+            </p>
           </div>
-        ))
-    }
-  </div>
-</Section>
+          <a
+            href="https://tickets.nixcon.org/2023/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 bg-nixblue-300 text-right font-bold hover:bg-nixblue-400 transition-all"
+          >
+            Buy {ticket.free_price ? "starting at" : "for"}{" "}
+            {ticket.default_price} € &#187;
+          </a>
+        </div>
+      ))
+  }
+</div>
