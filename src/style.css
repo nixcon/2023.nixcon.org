@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a:any-link,
+  a:visited {
+    font-weight: 800;
+    @apply text-nixblue-600;
+  }
+
+  a:hover {
+    font-weight: 800;
+    text-decoration: underline solid 2px;
+    @apply text-nixblue-800;
+  }
+
+  .linklist {
+    @apply flex flex-col  md:flex-row flex-wrap gap-4 mb-4;
+  }
+  .linklist a {
+    @apply no-underline block hover:underline py-2 px-4 border-2 border-nixblue-800 font-bold bg-nixblue-50;
+  }
+
+  .frame {
+    height: 100vh;
+    width: 100vw;
+    border-image-source: url("/site_frame.svg");
+    border-image-slice: 33.2% 46.9% 33.28%;
+    border-image-width: 33vw;
+    border-image-repeat: stretch round;
+    position: absolute;
+  }
+
+  .content {
+    position: absolute;
+    width: 100vw;
+    bottom: 5vh;
+    height:85vh;
+    padding: 0 12vw;
+    overflow: scroll;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
+  }
+}
