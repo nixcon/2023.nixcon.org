@@ -18,6 +18,9 @@ jobs:
 
       - uses: cachix/install-nix-action@v20
 
+      - name: Fetch API data
+        run: bash ./data/fetch.sh
+
       - name: Build
         run: |
           nix build

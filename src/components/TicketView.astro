@@ -1,0 +1,68 @@
+---
+import Section from "./Section.astro";
+import SectionHeading from "./SectionHeading.astro";
+import SectionParagraph from "./SectionParagraph.astro";
+import data from "./../../data/tickets.json";
+
+let ticket_data = null;
+
+if (!process.env["NIX_BUILD_TOP"]) {
+  let ticket_data_request = await fetch(
+    "https://pretix.eu/api/v1/organizers/nixcon/events/2023/items/",
+    {
+      headers: {
+        Authorization: `Token ${import.meta.env.PRETIX_TOKEN}`,
+      },
+    }
+  );
+  ticket_data = await ticket_data_request.json();
+} else {
+  ticket_data = data;
+}
+---
+
+<div class="flex flex-col justify-center gap-4 pt-1">
+  {
+    ticket_data.results
+      .sort((a, b) => a.position - b.position)
+      .filter((ticket) => ticket.active)
+      .map((ticket) => (
+        <div>
+          <div class="p-4 border-2 border-nixblue-900 flex gap-1 flex-col">
+            <h3 class="text-xl font-bold">{ticket.name.en}</h3>
+            <SectionParagraph noMb={true}>
+              {ticket.description.en}
+            </SectionParagraph>
+            {ticket.personalized || ticket.admission ? (
+              <p class="flex gap-2 mt-2">
+                {ticket.admission ? (
+                  <small class="bg-nixblue-200 inline-block p-1 rounded">
+                    grants Admission
+                  </small>
+                ) : null}
+                {ticket.personalized ? (
+                  <small class="bg-nixblue-200 inline-block p-1 rounded">
+                    personalized
+                  </small>
+                ) : null}
+              </p>
+            ) : null}
+          </div>
+          <a
+            href="https://tickets.nixcon.org/2023/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4
+            border-b-2 border-nixblue-900
+            border-l-2 border-nixblue-900
+            border-r-2 border-nixblue-900
+            bg-nixblue-200
+            text-right font-bold hover:bg-nixblue-300 transition-all"
+          >
+            Buy {ticket.free_price ? "starting at" : "for"}{" "}
+            {ticket.default_price} € &#187;
+          </a>
+        </div>
+      ))
+  }
+</div>
