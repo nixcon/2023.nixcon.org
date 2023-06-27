@@ -19,6 +19,8 @@ jobs:
       - uses: cachix/install-nix-action@v20
 
       - name: Fetch API data
+        env:
+          PRETIX_TOKEN: ${{ secrets.PRETIX_TOKEN }}
         run: bash ./data/fetch.sh
 
       - name: Build
