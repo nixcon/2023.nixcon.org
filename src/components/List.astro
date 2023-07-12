@@ -3,10 +3,11 @@ const { indent } = Astro.props;
 
 // make sure to update the tailwind.config.cjs if you add excessive levels
 if (indent > 10) {
-   throw "Too many levels of indent selected. Please add your required levels to the tailwind.config.js";
+  throw "Too many levels of indent selected. Please add your required levels to the tailwind.config.js";
 }
-const indent_level = indent ? indent : 0;
+let indent_level = (indent ? indent : 0) * 4;
 ---
+
 <ul class=`list-disc list-inside pl-${indent_level}`>
   <slot />
 </ul>

@@ -119,33 +119,66 @@ import ListItem from "../components/ListItem.astro";
     <SectionParagraph>
       You can reach the venue in Darmstadt, Germany by
 
-      <marquee class="pl-8">test</marquee>
-
       <List>
-	<ListItem>
-	  Plane:
-	  <List indent=1>
-	    <ListItem>
-	      Arrive at FRA (Frankfurt International Airport, <b>not</b> Frankfurt-Hahn (HHN)),
-	    </ListItem>
-	    <li>Then either take the <a href="https://www.heagmobibus.de/sites/default/files/media/_Airliner_Faltblatt_2023_04_17_Web_0.pdf" target="_blank">Airliner Shuttle</a> that goes all the way to Darmstadt city center with a stop at the main train station.</li>
-	    <li>Or take a train from the airport’s “Regionalbahnhof” to Frankfurt (Main) Hbf and swap there to Darmstadt Hbf.</li>
-	  </List>
-	</ListItem>
-	<li>
-	  Train:
-	  <ul class="list-disc list-inside">
-	    <li>Darmstadt Hbf (main train station) is reachable by RE/IC/ICE. The closest station to the venue is the <a href="https://www.google.com/maps/place/Darmstadt+Alexanderstra%C3%9Fe%2FTU/@49.87575,8.66062,15z/data=!4m2!3m1!1s0x0:0xa70bcd66fefeb9dd?sa=X&amp;ved=2ahUKEwjf16O_3JP_AhUS7aQKHYs7C9gQ_BJ6BAg5EAM" target="_blank">Alexanderstraße/TU</a> bus stop.</li>
-	    <li>Locally tickets can be bought from <a href="https://www.rmv.de" target="_blank">RMV</a>, e.g. from vending stations at most stations in Darmstadt</li>
-	  </ul>
-	</li>
-	<li>
-	  Car: See the full address above. There are various places for parking. Non-exhaustive list:
-	  <ul class="list-disc list-inside pl-5 mt-2">
-            <li><a href="https://osm.org/go/0DxdhZQc6?layers=N&way=22937260" target="_blank" rel="noopener">Messplatz &amp; Nordbad, Alsfelder Str.</a></li>
-            <li><a href="https://www.darmstadt-tourismus.de/besuch/details/poidetail/parkplatz-mercksplatz.html" target="_blank" rel="noopener">Mercksplatz</a>, up to 4 hours (warning: you have to indicate in some way what time you parked the car, visible through the windscreen).</li>
-	  </ul>
-	</li>
+        <ListItem>
+          Plane:
+          <List indent={1}>
+            <ListItem>
+              Arrive at FRA (Frankfurt International Airport, <b>not</b> Frankfurt-Hahn
+              (HHN)),
+            </ListItem>
+            <li>
+              Then either take the <a
+                href="https://www.heagmobibus.de/sites/default/files/media/_Airliner_Faltblatt_2023_04_17_Web_0.pdf"
+                target="_blank">Airliner Shuttle</a
+              > that goes all the way to Darmstadt city center with a stop at the
+              main train station.
+            </li>
+            <li>
+              Or take a train from the airport’s “Regionalbahnhof” to Frankfurt
+              (Main) Hbf and swap there to Darmstadt Hbf.
+            </li>
+          </List>
+        </ListItem>
+        <ListItem>
+          Train:
+          <List indent={1}>
+            <li>
+              Darmstadt Hbf (main train station) is reachable by RE/IC/ICE. The
+              closest station to the venue is the <a
+                href="https://www.google.com/maps/place/Darmstadt+Alexanderstra%C3%9Fe%2FTU/@49.87575,8.66062,15z/data=!4m2!3m1!1s0x0:0xa70bcd66fefeb9dd?sa=X&ved=2ahUKEwjf16O_3JP_AhUS7aQKHYs7C9gQ_BJ6BAg5EAM"
+                target="_blank">Alexanderstraße/TU</a
+              > bus stop.
+            </li>
+            <li>
+              Locally tickets can be bought from <a
+                href="https://www.rmv.de"
+                target="_blank">RMV</a
+              >, e.g. from vending stations at most stations in Darmstadt
+            </li>
+          </List>
+        </ListItem>
+        <ListItem>
+          Car: See the full address above. There are various places for parking.
+          Non-exhaustive list:
+          <List indent={1}>
+            <li>
+              <a
+                href="https://osm.org/go/0DxdhZQc6?layers=N&way=22937260"
+                target="_blank"
+                rel="noopener">Messplatz &amp; Nordbad, Alsfelder Str.</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.darmstadt-tourismus.de/besuch/details/poidetail/parkplatz-mercksplatz.html"
+                target="_blank"
+                rel="noopener">Mercksplatz</a
+              >, up to 4 hours (warning: you have to indicate in some way what
+              time you parked the car, visible through the windscreen).
+            </li>
+          </List>
+        </ListItem>
       </List>
     </SectionParagraph>
   </Section>

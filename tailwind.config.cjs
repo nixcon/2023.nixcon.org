@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 let extraSpacing = {};
 for (var i = 1; i <= 10; i++) {
-   extraSpacing[i + ""] = (0.25 * i) + "rem";
+  extraSpacing[i + ""] = 0.25 * i + "rem";
 }
 console.log(extraSpacing);
 
@@ -33,5 +33,10 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /pl-/,
+    },
+  ],
   plugins: [require("@tailwindcss/typography")],
 };
