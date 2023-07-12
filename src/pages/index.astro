@@ -11,6 +11,7 @@ import ListItem from "../components/ListItem.astro";
 import BlockList from "../components/BlockList.astro";
 import BlockListHeader from "../components/BlockListHeader.astro";
 import BlockListBody from "../components/BlockListBody.astro";
+import { Icon } from "astro-icon";
 ---
 
 <LayoutDefault>
@@ -122,7 +123,10 @@ import BlockListBody from "../components/BlockListBody.astro";
 
     <BlockList>
       <li>
-        <BlockListHeader>By plane</BlockListHeader>
+        <BlockListHeader>
+          <Icon name="mdi:plane" class="mr-1 h-6 w-6 inline-block" />
+          By plane
+        </BlockListHeader>
         <BlockListBody>
           <List>
             <ListItem>
@@ -144,7 +148,10 @@ import BlockListBody from "../components/BlockListBody.astro";
         </BlockListBody>
       </li>
       <li>
-        <BlockListHeader>By train</BlockListHeader>
+        <BlockListHeader>
+          <Icon name="mdi:train" class="mr-1 h-6 w-6 inline-block" />
+          By train
+        </BlockListHeader>
         <BlockListBody>
           <List>
             <ListItem>
@@ -164,7 +171,10 @@ import BlockListBody from "../components/BlockListBody.astro";
         </BlockListBody>
       </li>
       <li>
-        <BlockListHeader>By car</BlockListHeader>
+        <BlockListHeader>
+          <Icon name="mdi:car" class="mr-1 h-6 w-6 inline-block" />
+          By car
+        </BlockListHeader>
         <BlockListBody>
           <List>
             <ListItem>
