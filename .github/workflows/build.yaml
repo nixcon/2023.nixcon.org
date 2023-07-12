@@ -23,8 +23,12 @@ jobs:
         run: |
           nix build
 
+      - name: Copy build result
+        run: |
+          cp -rv $(readlink -f result) out
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: website
-          path: result/**
+          path: out/**
