@@ -23,7 +23,7 @@ if (!process.env["NIX_BUILD_TOP"]) {
 
 <div class="flex flex-col justify-center gap-4 pt-1">
   {
-    ticket_data.results
+    (ticket_data.results || [])
       .sort((a, b) => a.position - b.position)
       .filter((ticket) => ticket.active)
       .map((ticket) => (
