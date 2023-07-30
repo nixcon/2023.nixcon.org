@@ -12,6 +12,7 @@ import BlockList from "../components/BlockList.astro";
 import BlockListHeader from "../components/BlockListHeader.astro";
 import BlockListBody from "../components/BlockListBody.astro";
 import Icon from "../components/Icon.astro";
+import Sponsor from "../components/Sponsor.astro";
 ---
 
 <LayoutDefault>
@@ -199,4 +200,24 @@ import Icon from "../components/Icon.astro";
       </li>
     </BlockList>
   </Section>
+  <Section>
+    <SectionHeading>Sponsors</SectionHeading>
+    <SubSectionHeading>Gold sponsors</SubSectionHeading>
+    <ul class="flex flex-rows flex-wrap justify-center gap-x-16 gap-y-8">
+      <Sponsor level="gold" image="cachix.png" alt="Cachix" url="https://cachix.org" />
+      <Sponsor level="gold" image="flox.png" alt="Flox" url="https://floxdev.com" extraClasses="px-10" />
+      <Sponsor level="gold" image="numtide.png" alt="Numtide" url="https://numtide.com" />
+      <Sponsor level="gold" image="flyingcircus.png" alt="Flying Circus" url="https://flyingcircus.io/" />
+      <Sponsor level="gold" image="tweag.png" alt="Tweag" url="https://tweag.io/" />
+    </ul>
+    <SubSectionHeading>Silver sponsors</BlockListHeader>
+    <ul class="flex flex-rows flex-wrap justify-center gap-x-8 gap-y-8">
+      <Sponsor level="silver" image="helsinki-systems.png" alt="Flying Circus" url="https://flyingcircus.io/" />
+      <Sponsor level="silver" image="meetwise.png" alt="meetwise" url="https://meetwise.com/" />
+      <Sponsor level="silver" image="google-os.png" alt="Google" url="https://google.com/" />
+      <Sponsor level="silver" image="wdz.png" alt="WDZ" url="https://wdz.de/" />
+      <Sponsor level="silver" image="pdt-partners.png" alt="PDT Partners" url="https://example.com/" />
+      <Sponsor level="silver" image="anduril.png" alt="Anduril" url="https://www.anduril.com/" />
+    </ul>
+ </Section>
 </LayoutDefault>
