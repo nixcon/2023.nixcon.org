@@ -1,6 +1,7 @@
 ---
+const { extraClasses } = Astro.props;
 ---
 
-<h2 class="text-2xl font-black text-gray-600 mt-6 mb-2 font-behrensschrift">
+<h2 class=`text-2xl font-black text-gray-600 mt-6 mb-2 font-behrensschrift ${extraClasses}`>
     <slot />
 </h2>
