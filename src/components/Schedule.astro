@@ -1,17 +1,109 @@
 ---
-var data = { results: [] };
+import data from "./../../data/schedule.json";
+console.log(
+  data.results.map((d) => d)
+)
 
-if (!process.env["NIX_BUILD_TOP"]) {
-  const res = await fetch(
-    "https://talks.nixcon.org/api/events/nixcon-2022/talks/"
-  );
-  data = await res.json();
-}
+let sorted = data.results.sort((a, b) => {
+  return a.slot.start.localeCompare(b.slot.start)
+})
 ---
 
-data.results.map((talk: any) => (<div
-  class="flex flex-col items-start justify-start p-4 my-4 bg-white rounded-lg shadow-lg"
->
-  <h2 class="text-2xl font-bold text-gray-700">{talk.title}</h2>
-  <p class="mt-2 text-gray-600">{talk.abstract}</p>
-</div>))
+<div class="flex flex-col">
+  {
+    sorted.map((item, index) => {
+      if (item.submission_type.en == "Break"
+      || item.submission_type.en == "Break Long"
+      ) {
+        return (
+          <h2 class="border font-black text-lg bg-nixblue-800 rounded-lg text-white text-center p-2 flex flex-col">
+            {item.title}
+            <small>
+              {(new Date(item.slot.start)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+              -
+              {(new Date(item.slot.end)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            </small>
+          </h2>
+        )
+      }
+
+      return (
+        <div key={index}
+          class="slot"
+        >
+          <div class="slot-line-top">
+            <div class="slot-line-graphic"></div>
+          </div>
+          {item.submission_type.en === "Talk" ? (
+            <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500">
+                {(new Date(item.slot.start)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            </span>
+          ): null}
+          {item.submission_type.en === "Lightning talk" ? (
+            <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500">
+                {(new Date(item.slot.start)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            </span>
+          ): null}
+          {item.submission_type.en === "Product Talk" ? (
+            <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-green-500">
+                {(new Date(item.slot.start)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            </span>
+          ): null}
+          {item.submission_type.en === "Happy Hour" ? (
+            <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-purple-500">
+                {(new Date(item.slot.start)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            </span>
+          ): null}
+          <div class="slot-line-bottom">
+            <div class="slot-line-graphic"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg my-2 rounded-tl-none">
+            <h2
+            class="text-md font-bold p-2 bg-black text-gray-50"
+          >{item.title}</h2>
+          <small class="px-2 block bg-gray-800 text-white text-bold">
+            {
+              item.speakers.map((speaker, index) => {
+                return (
+                  <span key={index}>
+                    {speaker.name}
+                    {index < item.speakers.length - 1 ? ", " : ""}
+                  </span>
+                )
+              })
+            }
+            - {item.submission_type.en}
+          </small>
+          <p
+            class="p-2"
+          >{item.abstract}</p>
+          </div>
+        </div>
+      )
+    })
+  }
+</div>
+
+<style>
+
+  .slot {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: 0.5rem auto 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .slot-line-top { grid-area: 1 / 1 / 2 / 2; }
+  .slot-time { grid-area: 2 / 1 / 3 / 2; }
+  .slot-line-bottom { grid-area: 3 / 1 / 4 / 2; }
+  .slot-info { grid-area: 1 / 2 / 4 / 3; }
+  .slot-line-graphic {
+    background-color: black;
+    display: block;
+    width: 0.125rem;
+    height: 100%;
+    margin: 0 auto;
+    min-height: 100%;
+  }
+</style>

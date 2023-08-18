@@ -1,1 +1,774 @@
-{}
+{
+  "count": 43,
+  "next": "https://talks.nixcon.org/api/events/nixcon-2022/talks/?limit=25&offset=25",
+  "previous": null,
+  "results": [
+    {
+      "code": "QEUJH3",
+      "speakers": [
+        {
+          "code": "QAFW7P",
+          "name": "korfuri",
+          "biography": "I'm a software and security engineer with a broad interest in many topics that somehow all end up leading me to Nix.",
+          "avatar": "https://talks.nixcon.org/media/avatars/korfuri_5QITc9a.png"
+        }
+      ],
+      "title": "We should manage secrets the systemd way!",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Systemd 250 introduced a way to manage encrypted \"credentials\" (secrets, reallly) in a way that I think NixOS could benefit from. We're not using it anywhere yet, but we should. This describes briefly how systemd wants to manage credentials and how to integrate that in a NixOS setup.",
+      "description": "",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T11:50:00+02:00",
+        "end": "2022-10-21T11:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "AVEBA8",
+      "speakers": [
+        {
+          "code": "USMR7N",
+          "name": "Tom Bereknyei",
+          "biography": null,
+          "avatar": null
+        }
+      ],
+      "title": "flox to nix",
+      "submission_type": { "en": "Product Talk" },
+      "submission_type_id": 2376,
+      "track": { "en": "Main room" },
+      "track_id": 3083,
+      "state": "confirmed",
+      "abstract": "flox, a quick run through of bringing Nix to work, making it simple and scalable",
+      "description": "",
+      "duration": 10,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T13:30:00+02:00",
+        "end": "2022-10-21T13:40:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "KFR3ZF",
+      "speakers": [
+        {
+          "code": "EA739Y",
+          "name": "Jade Lovelace",
+          "biography": "Jade is a Computer Engineering student at the University of British Columbia in Vancouver, Canada. They are currently on internship working on financial software using Haskell and Nix at [Mercury](https://mercury.com). While they're not hacking on tools or Posting, they like to bake and do pottery.\r\n\r\nJade uses Nix and NixOS extensively at work and at home, particularly for development environments and Haskell.\r\n\r\nTheir Web site can be found at https://jade.fyi",
+          "avatar": "https://talks.nixcon.org/media/avatars/greyscale_pfp_GBllC8A.jpg"
+        }
+      ],
+      "title": "Debugging closure sizes graphically",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Big closure sizes bog down deploys by wasting time and space shipping around unnecessary bits, particularly with Docker containers. Nix provides tools to analyze closures, but both the graphical and textual methods leave something to be desired, especially when dealing with NixOS system closures with hundreds of derivations.\r\n\r\nI'll demonstrate debugging excessive closure size of a Docker image of an open source NodeJS application, bringing the image size down from 300MB to around 100MB.\r\n\r\nIn this session, I'll introduce a new tool I've built that can show system closures graphically as network-graphs, making debugging the causes of excessive closure size easy, irrespective of the number of derivations involved.",
+      "description": "Every Nix derivation, including NixOS system images, has a so-called closure. The closure includes every dependency and transitive dependency of the derivation. On your local development system, excessive closure size mostly just wastes disk space, but when deploying software built with Nix, every dependency, including ones that are not actually required to run, needs to be shipped to the target system in the deployment. Shuffling around these unnecessary bits can very quickly add up to significant slowdowns.\r\n\r\nIt is very easy to accidentally introduce bugs in derivations that cause unnecessary runtime dependencies and add closure size. A runtime dependency in Nix is created by simply having a store path of some other derivation anywhere in the output, perhaps in a path to an interpreter for a script that is never called, or something else. Sometimes this isn't even your fault! Nixpkgs has closure size bugs too.\r\n\r\nNix provides tools to view closure dependencies in a table, or to generate a graph with GraphViz. Unfortunately, the table is hard to divine the meaning of, while the built in graph output doesn't show sizes and runs into GraphViz performance and usability limitations on very large numbers of nodes such as appear in NixOS closures. My alternative graph viewer lets you have your cake and eat it too: it scales up to very large graphs and shows more details than either built-in option.\r\n\r\nI'll demonstrate debugging excessive closure size of a Docker image of an open source NodeJS application, bringing the image size down from 300MB to around 100MB.",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T11:40:00+02:00",
+        "end": "2022-10-20T12:05:00+02:00"
+      },
+      "image": "https://talks.nixcon.org/media/nixcon-2022/submissions/KFR3ZF/Looking_Glass_Demo_Q3bbkIq.png",
+      "resources": []
+    },
+    {
+      "code": "NW79SB",
+      "speakers": [
+        {
+          "code": "A3BRRY",
+          "name": "Valentin Gagarin",
+          "biography": "While switching careers to software engineering after years in education, film making and graphics design, Valentin got into Nix and NixOS on his never-ending endeavor of making computers work reliably in the long run. He had been an active member of the Nix community as @fricklerhandwerk before joining Tweag in 2022, helping newcomers, sharing knowledge, and contributing code fixes and clarifications of the documentation one pull request at a time.\r\n\r\nSponsored by Tweag, this year Valentin has been working on improving to the Nix onboarding experience, has founded and led the Nix documentation team to attack larger issues in the ecosystem, and helped Summer of Nix 2022 participants to accommodate their numerous contributions.",
+          "avatar": "https://talks.nixcon.org/media/avatars/valentin.gagarin_4XWGa30.jpg"
+        }
+      ],
+      "title": "Improving Nix documentation",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Documentation has always been a sore point for Nix, and the 2022 community survey results have clearly shown demand for improvement. This talk reports on this year's proceedings in better documenting the Nix ecosystem.",
+      "description": "The talk outlines\r\n- what the problems with learning Nix have been in the past\r\n- what we have done this year to address them\r\n- a vision for the near-to-mid-term future\r\n- what you can do to help.",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T15:30:00+02:00",
+        "end": "2022-10-21T15:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "DA7E9R",
+      "speakers": [],
+      "title": "Social Event: Jazz Concert",
+      "submission_type": { "en": "Happy Hour" },
+      "submission_type_id": 2379,
+      "track": { "en": "Main room" },
+      "track_id": 3083,
+      "state": "confirmed",
+      "abstract": "A jazz concert involving Swing and Bossa Nova:\r\n\r\n- Caravan\r\n- Every wants to be a cat\r\n- Chega de Saudade\r\n- Take Five\r\n\r\nAnd more.\r\n\r\nA special Nix-theme music was composed for this concert by the band, ask organizers about details, history and genesis. :)",
+      "description": "",
+      "duration": 120,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": true,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T18:00:00+02:00",
+        "end": "2022-10-20T20:00:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "8HARVG",
+      "speakers": [
+        {
+          "code": "LTYMA7",
+          "name": "Rémi NICOLE",
+          "biography": "Passionate about the Linux and Open-Source world, I have been interested and involved with the Nix ecosystem since 2017.\r\n\r\nToday, I am working in the French Alternative Energies and Atomic Energy Commission (CEA), where I am, among other things, developing Nix solutions for fundamental physics research.",
+          "avatar": "https://talks.nixcon.org/media/avatars/profile-pic_8TehM5E.jpg"
+        }
+      ],
+      "title": "Nix for particle accelerators, and the adventure in cross-compilation",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "A presentation of the cross-compilation infrastructure, and the troubles and successes using it for an embedded system.",
+      "description": "In the data acquisition / instrumentation world, we often get to use embedded boards provided with a Buildroot or Yocto Linux OS. But, as the project tends to grow, these images tend to get unmaintained, which drove us to try to compile our own Linux images, using NixOS.\r\n\r\nWe start with an introduction of the cross-compiling infrastructure of nixpkgs, and how you can cross-compile Nix packages, and NixOS images for embedded systems. We will then see how well it applied to our own use case, the troubles it gave us, and how different it is compared to your usual Buildroot or Yocto Linux images.",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T10:00:00+02:00",
+        "end": "2022-10-20T10:25:00+02:00"
+      },
+      "image": null,
+      "resources": [
+        {
+          "resource": "https://talks.nixcon.org/media/nixcon-2022/submissions/8HARVG/resources/slides_q9Hz2oQ.pdf",
+          "description": "slides"
+        }
+      ]
+    },
+    {
+      "code": "3CFK3R",
+      "speakers": [
+        {
+          "code": "QF8SXS",
+          "name": "Cleeyv",
+          "biography": "Cleeyv has been working as a sysadmin for non-profits organizations since 2012, prioritizing support for software that is open source and privacy focused. He has been using NixOS since 2020 and became a Nixpkgs maintainer during Summer of Nix 2021.",
+          "avatar": "https://talks.nixcon.org/media/avatars/2SNYCTxZ_400x400-circle_oocehYd.png"
+        },
+        {
+          "code": "WCAGPZ",
+          "name": "tshaynik",
+          "biography": "tshaynik became interested Nix and NixOS out of an interest in functional programming and a frustration with more well-known Infrastructure as Code tools. tshaynik is passionate about deterministic software deployments, computational musicology, and improving access to open source, privacy-protecting software. He has participated in Summer of Nix in 2020 (as a participant) and 2021 (as a project lead).",
+          "avatar": null
+        }
+      ],
+      "title": "Jitsi on NixOS",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Jitsi Meet is one of the most widely used options for open source video conferencing. In addition to basic video conferences, it also supports a substantial ecosystem of additional components and features, and while these add important functionality they also increase substantially the complexity of a deployment. As part of Summer of Nix 2021 and 2022 we have been working on dramatically simplifying the process of doing more complex, featureful deployments of Jitsi Meet by using the powerful packaging and configuration tools of NixOS. This talk will cover what we have done so far on this project, the work that still remains, and what this means more broadly for packaging and deploying large server-side open source projects on NixOS.",
+      "description": "",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": true,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T12:20:00+02:00",
+        "end": "2022-10-21T12:25:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "HG3LAS",
+      "speakers": [
+        {
+          "code": "UC37SA",
+          "name": "Leandro Emmanuel Reina Kiperman",
+          "biography": "* 29 years old\r\n* Argentinian, but currently living in Germany\r\n* Embedded Linux Engineer @ [OroraTech](https://ororatech.com/)\r\n* Spanish and English speaker",
+          "avatar": "https://talks.nixcon.org/media/avatars/image_yBVydNF.jpg"
+        }
+      ],
+      "title": "Nix: a space odyssey",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "An overview on how we make use of NixOS in our satellite payloads as the backbone of our wildfire detection services.",
+      "description": "At OroraTech our mission is to provide a holistic wildfire intelligence service; for which we design, construct, and deploy custom satellite payloads in order to help achieve that goal. For its reliable and reproducible nature, we've decided to make use of NixOS as the underlying operating system of our future payloads.\r\n\r\nIn this presentation, we want to briefly show you a real world example of how Nix and NixOS have made software deployment a breeze, even in extreme scenarios such as outer space",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T14:30:00+02:00",
+        "end": "2022-10-21T14:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "JJJT7S",
+      "speakers": [
+        {
+          "code": "RQSXAR",
+          "name": "Domen Kožar",
+          "biography": null,
+          "avatar": "https://talks.nixcon.org/media/avatars/af4dd526335d538062d9d47db5ed3e27_whPcf41.jpg"
+        }
+      ],
+      "title": "Why we've built yet another Nix deployment tool",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": { "en": "Main room" },
+      "track_id": 3083,
+      "state": "confirmed",
+      "abstract": "Deep dive into Cachix deploy design decisions and demonstration of common developer workflows",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T15:30:00+02:00",
+        "end": "2022-10-20T15:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "QQPBFW",
+      "speakers": [
+        {
+          "code": "ZPLAPX",
+          "name": "Maximilian Bosch",
+          "biography": "I'm working as a systems administrator, software developer and Nix consultant for Mayflower GmbH. As an active member of the ecosystem I contribute back whatever is useful and maintain miscellaneous components for 5 years now.",
+          "avatar": "https://talks.nixcon.org/media/avatars/me_UB0j71x.jpg"
+        }
+      ],
+      "title": "Nix and legacy enterprise software development: an unlikely match made in heaven",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "This talk is supposed to demonstrate a nice side-effect of being able to build old Nix expressions and even having a binary cache with the build artifacts available: for the data migration from a legacy project we had to debug a flash-based component. Even in 2021 where the Flash player is dead and unavailable it was trivial to revive this piece of old software with Nix (and web.archive.org).",
+      "description": "",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T12:00:00+02:00",
+        "end": "2022-10-21T12:05:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "SYERSZ",
+      "speakers": [
+        {
+          "code": "ESGKGT",
+          "name": "Richard Brežák",
+          "biography": null,
+          "avatar": null
+        }
+      ],
+      "title": "Squeezing efficient and small Nix containers into Nomad",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": { "en": "Main room" },
+      "track_id": 3083,
+      "state": "confirmed",
+      "abstract": "This talk will discuss one possible strategy for building and deploying small and efficient Nix containers. We will go through what has been tried before and then present a personal deployment of the proposed system which has been actively used and proven to work. We will also explore and explain why the current solutions available aren't suitable as shown by the lacking prevelance of Nix containers in the Nix community.",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T10:00:00+02:00",
+        "end": "2022-10-21T10:30:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "JHVF8N",
+      "speakers": [
+        {
+          "code": "HMYGKG",
+          "name": "Martin Schwaighofer",
+          "biography": "Martin Schwaighofer is a PhD student at JKU in Austria, interested in proving the link between a running system and it's source code.\r\n\r\nBefore his PhD and his journey into Nix he worked on Android apps with strict security requirements, where among other things he put a lot of effort into cleanly defining 'hard-to-manage' project dependencies so that they could be more easily consumed by his colleagues.\r\n\r\nYou can reach him via [email](https://www.jku.at/institut-fuer-netzwerke-und-sicherheit/ueber-uns/ins-team/schwaighofer-martin/), message him on [Twitter](twitter.com/mschwaig) or check what he's up to on [GitHub](https://github.com/mschwaig). He's happy to get in touch with people that have the same interests and maybe even collaborate.",
+          "avatar": "https://talks.nixcon.org/media/avatars/1600-900-max-crop_7KWuj3U.jpg"
+        }
+      ],
+      "title": "Reproducibly building artifacts that contain embedded signatures",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Signatures are annoying when you are trying build software reproducibly, especially when deeply embedded in the output artifact. Let's look at how we can tackle this problem elegantly with Nix.",
+      "description": "Reproducibility means that someone else can independently recreate exactly the same binary artifact. This is very useful for confidently knowing what source code a binary artifact was built from. People are analyzing artifacts with tools like `diffoscope` to exactly locate differences between two artifacts built using the same build instructions. For complex projects even when looking at an exact difference in the output that way, it is not always easy to find the cause of that difference.\r\n\r\nIn general using Nix to split the build instructions into smaller steps can help us make this process easier, because we can notice differences at the end of the intermediary step that introduced them, as long as we are `nix build --rebuild`ing the right build steps.\r\n\r\nEven then signatures are still a problem, because we can never really reproduce a signed artifact without access to the signing key and even with access to the key not all popular signing schemes produce signatures deterministically. We either have to substitute in the expected signatures or keep track of those expected differences.\r\n\r\nThere is a nice pattern that we can use for always substituting the correct signatures with Nix, which makes it easy to verify embedded signatures as part of such an independent recreation process even for a large and complicated artifact. The same pattern also takes advantage of Nix's binary caches to automatically obtain all the required signatures, which are ideally the only thing we cannot reproduce.",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T11:40:00+02:00",
+        "end": "2022-10-21T11:45:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "PYBXDM",
+      "speakers": [
+        {
+          "code": "SQ8XGC",
+          "name": "Farid Zakaria",
+          "biography": "Software Engineer with over a decade of experience. I like many of you, have discovered Nix and could not let it go. I have found success using Nix for personal and corporate environments. I have contributed mostly to the development and improvement of using Nix within the Java ecosystem. I am currently exploring ways to further leverage the Nix store in more fundamental ways.",
+          "avatar": "https://talks.nixcon.org/media/avatars/5f1f863259165f1382a5412f1d02a843_HEstXGL.jpg"
+        },
+        {
+          "code": "TUBF3G",
+          "name": "Carlos Maltzahn",
+          "biography": null,
+          "avatar": null
+        },
+        {
+          "code": "VNBLKZ",
+          "name": "Tom Scogland",
+          "biography": null,
+          "avatar": null
+        }
+      ],
+      "title": "Rethinking basic primitives for store based systems",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Nix has introduced the world to store-based systems and ushered a new wave of reproducibility. These new systems however are built atop long established patterns and occasionally leverage them to band-aid over the problems Nix aims to solve.\r\n\r\nHow much further can we leverage the store abstraction to rethink long valued established patterns in Unix based operating systems? This talk will introduce some of the simple improvements one can uncover starting at the linking phase of object building and process startup. \r\n\r\nThe authors introduce Shrinkwrap which can greatly improve startup performance and further improve reproducibility for applications ported to Nix by making simple improvement to how libraries are discovered and leveraging the store further. Additional explorations for improvements during the linking phase will be discussed and explored. It's time we rethink everything.",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T14:30:00+02:00",
+        "end": "2022-10-20T14:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "KE3MDW",
+      "speakers": [
+        {
+          "code": "WNKTLV",
+          "name": "Ron Efroni",
+          "biography": "CEO @ Flox, bringing Nix to work.\r\nRepeat founder, previously led Meta's Facebook Developer Infra Products teams.",
+          "avatar": "https://talks.nixcon.org/media/avatars/1516962377063_1_HPUZpkL.jpg"
+        }
+      ],
+      "title": "Strong Nix",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "How we pull together to set the community and Nix up for decades of Success",
+      "description": "We want to set Nix and the community up for success in the upcoming opportunity of igniting the inflection point that will lead Nix to be a household name in the industry's software developer life cycle. Through various companies' efforts and extreme external advocacy, more bits of the world are coming to be aware of Nix, the Nix community and of solutions provided through it. This is catalyzing the start of the inflection point. \r\nTalk through strategies, ideas and takeaways from other successful communities.",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T11:00:00+02:00",
+        "end": "2022-10-21T11:30:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "HCXCKA",
+      "speakers": [
+        {
+          "code": "ZZDDAT",
+          "name": "Linus Heckemann",
+          "biography": "Linus got quite frustrated with building Docker images in 2015. He thought there must be a better way, and dreamt of something very much resembling Nix. Imagine his joy when he discovered that it had already been done! Linus rapidly developed a taste for Nix, became a contributor, and made several career decisions based on it, becoming release manager for two NixOS releases along the way. This led him to Determinate Systems, where he is working on improving the Nix ecosystem in general.",
+          "avatar": null
+        }
+      ],
+      "title": "NixOS can live anywhere: why, how, and where?",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "NixOS is extremely versatile in terms of ways to get it onto machines! Let's explore:\r\n - How a Linux system boots\r\n - What a NixOS system consists of\r\n - How this enables deploying it to a wide variety of environments\r\n - Various examples environments into which a NixOS system can be deployed",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T09:05:00+02:00",
+        "end": "2022-10-21T09:30:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "KDKVSA",
+      "speakers": [
+        {
+          "code": "CH7HAF",
+          "name": "Eelco Dolstra",
+          "biography": "Eelco Dolstra started the Nix project as a PhD student at Utrecht University. He currently works at Determinate Systems.",
+          "avatar": "https://talks.nixcon.org/media/avatars/2e325a12c8976f6a704cd52048e68edd_pnciKCY.jpg"
+        }
+      ],
+      "title": "Scaling Up Flakes",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Flakes are becoming the *de facto* standard way of packaging Nix-based\r\nprojects. However, flakes have some major problems due to the way Nix\r\nenforces hermetic evaluation: flake inputs (such as Git repositories)\r\nare copied to the Nix store, which is slow for large repositories,\r\nmassively wastes disk space, and leads to confusing error messages. I\r\nwill discuss recent flake changes that not only solve these problems\r\nbut provide a bunch of other benefits, such as the ability to apply\r\npatches to inputs. I will also talk about future directions for\r\nflakes.",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": true,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T16:00:00+02:00",
+        "end": "2022-10-20T16:25:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "YPUVQK",
+      "speakers": [
+        {
+          "code": "9ZZ3BW",
+          "name": "John Ericson",
+          "biography": "John Ericson ([@Ericson2314](https://github.com/Ericson2314)) first installed NixOS in 2014, and has been contributing back to the ecosystem in various ways every since. Since joining [Obsidian Systems](https://obsidian.systems) in 2017, he was able to complete his dream of seamless cross compilation as a first-class feature in Nixpkgs. In 2020 he started getting into the Nix codebase itself, working on the IPFS integration and Content-Addressed derivations. Over the years, John has become increasingly interested in the leveraging the layering of Nix as means of both taming complexity and broadening our community.",
+          "avatar": null
+        }
+      ],
+      "title": "Learning the Nix Store layer",
+      "submission_type": { "en": "Talk" },
+      "submission_type_id": 2236,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Beneath NixOS, Nixpkgs, and the Nix expression language is the “Nix store” interface — a deceptively powerful interface that includes includes both storage itself and also building. Although we rarely use it directly, it’s at the heart of what makes Nix great. By understanding the semantics of the Nix store interface in isolation, intermediate and advanced Nix users can expand their intuition and problem solving skills while working with Nix. The ways we both use and implement the interface will keep evolving in myriad ways, but the interface itself, or at least the core ideas behind it, have remained remarkably stable, anchoring everything else we do.",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T09:30:00+02:00",
+        "end": "2022-10-20T09:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "BMWJCM",
+      "speakers": [
+        {
+          "code": "G8YXUV",
+          "name": "Théophane Hufschmitt",
+          "biography": "Théophane is a software engineer at Tweag I/O, and lead of the Nix team there.\r\nHe's also an active Nix contributor and member of the NixOS foundation board.",
+          "avatar": "https://talks.nixcon.org/media/avatars/7226587_gnPsxGH.jpg"
+        }
+      ],
+      "title": "Running the Nix daemon (nearly) rootless",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Making Nix follow the principle of least privilege by removing as much as possible the need to it to run as root",
+      "description": "In multi-user mode, the Nix daemon is expected to run as root.\r\nThis is quite annoying from a security point of view as the Nix codebase is (somewhat) large and not properly audited. Because of that it is also an adoption blocker in some places.\r\nI turns out that there's very few places where Nix actually needs to be root, and we can remove or isolate these, as done in https://github.com/NixOS/nix/pull/5380.",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T11:30:00+02:00",
+        "end": "2022-10-21T11:35:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "7BFWJ9",
+      "speakers": [],
+      "title": "Day 2 Afternoon Coffee Break",
+      "submission_type": { "en": "Break" },
+      "submission_type_id": 2377,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Day 2 Afternoon Coffee Break",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T15:00:00+02:00",
+        "end": "2022-10-21T15:25:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "XJJX8P",
+      "speakers": [],
+      "title": "NixCon Closing Ceremony",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "NixCon Opening Ceremony",
+      "description": "",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T16:00:00+02:00",
+        "end": "2022-10-21T16:05:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "7GWBHY",
+      "speakers": [],
+      "title": "Day 2 Morning Coffee Break",
+      "submission_type": { "en": "Break" },
+      "submission_type_id": 2377,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Day 2 Morning Coffee Break",
+      "description": "",
+      "duration": 25,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T10:30:00+02:00",
+        "end": "2022-10-21T10:55:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "KHS7TJ",
+      "speakers": [],
+      "title": "Day 2 Lunch Break",
+      "submission_type": { "en": "Break Long" },
+      "submission_type_id": 2378,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Day 2 Lunch Break",
+      "description": "",
+      "duration": 60,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T12:30:00+02:00",
+        "end": "2022-10-21T13:30:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "PRDMTV",
+      "speakers": [],
+      "title": "Hiring Happy Hour (Day 2)",
+      "submission_type": { "en": "Happy Hour" },
+      "submission_type_id": 2379,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Day 2 Hiring Happy Hour",
+      "description": "",
+      "duration": 120,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T16:05:00+02:00",
+        "end": "2022-10-21T18:05:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "VCQVMZ",
+      "speakers": [],
+      "title": "NixCon Opening Statements Day 2",
+      "submission_type": { "en": "Lightning talk" },
+      "submission_type_id": 2237,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Welcome to Day 2!",
+      "description": "",
+      "duration": 5,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-21T09:00:00+02:00",
+        "end": "2022-10-21T09:05:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    },
+    {
+      "code": "WYS99B",
+      "speakers": [],
+      "title": "Day 1 Lunch Break",
+      "submission_type": { "en": "Break Long" },
+      "submission_type_id": 2378,
+      "track": null,
+      "track_id": null,
+      "state": "confirmed",
+      "abstract": "Day 1 Lunch Break",
+      "description": "",
+      "duration": 60,
+      "slot_count": 1,
+      "do_not_record": false,
+      "is_featured": false,
+      "content_locale": "en",
+      "slot": {
+        "room_id": 1717,
+        "room": { "en": "Main track (Gym)" },
+        "start": "2022-10-20T12:10:00+02:00",
+        "end": "2022-10-20T13:10:00+02:00"
+      },
+      "image": null,
+      "resources": []
+    }
+  ]
+}
