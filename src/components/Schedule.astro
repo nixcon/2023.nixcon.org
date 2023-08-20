@@ -1,12 +1,26 @@
 ---
 import data from "./../../data/schedule.json";
-console.log(
-  data.results.map((d) => d)
-)
+let sorted = [];
+let daycount = 1;
 
-let sorted = data.results.sort((a, b) => {
+data.results.sort((a, b) => {
   return a.slot.start.localeCompare(b.slot.start)
-})
+}).forEach((el, idx, arr) => {
+  if (idx == 0 || new Date(arr[idx - 1].slot.start).getDate() != new Date(el.slot.start).getDate()) {
+    if(idx !== 0) daycount++;
+    sorted.push({
+      title: `Start of Day ${daycount}`,
+      submission_type: {
+        en: "Day"
+      },
+      slot: {
+        start: new Date(el.slot.start).setHours(0, 0, 0, 0),
+        end: new Date(el.slot.start).setHours(23, 59, 59, 999)
+      }
+    })
+  }
+  sorted.push(el);
+});
 ---
 
 <div class="flex flex-col">
@@ -23,6 +37,14 @@ let sorted = data.results.sort((a, b) => {
               -
               {(new Date(item.slot.end)).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
             </small>
+          </h2>
+        )
+      }
+
+      if (item.submission_type.en == "Day") {
+        return (
+          <h2 class="border font-black text-lg bg-nixblue-800 rounded-lg text-white text-center p-2 flex flex-col">
+            {item.title}
           </h2>
         )
       }
@@ -57,23 +79,23 @@ let sorted = data.results.sort((a, b) => {
           <div class="slot-line-bottom">
             <div class="slot-line-graphic"></div>
           </div>
-          <div class="slot-info border border-black rounded-lg my-2 rounded-tl-none">
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none">
             <h2
             class="text-md font-bold p-2 bg-black text-gray-50"
           >{item.title}</h2>
-          <small class="px-2 block bg-gray-800 text-white text-bold">
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1">
             {
               item.speakers.map((speaker, index) => {
                 return (
                   <span key={index}>
                     {speaker.name}
-                    {index < item.speakers.length - 1 ? ", " : ""}
+                    {index < item.speakers.length - 1 ? ", " : " - "}
                   </span>
                 )
               })
             }
-            - {item.submission_type.en}
-          </small>
+            {item.submission_type.en}
+          </p>
           <p
             class="p-2"
           >{item.abstract}</p>
@@ -105,5 +127,19 @@ let sorted = data.results.sort((a, b) => {
     height: 100%;
     margin: 0 auto;
     min-height: 100%;
+  }
+  @media (max-width: 768px) {
+    .slot {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2rem auto 1rem auto;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+    .slot-line-top { grid-area: 1 / 1 / 2 / 2; }
+    .slot-time { grid-area: 2 / 1 / 3 / 2; }
+    .slot-line-bottom { grid-area: 3 / 1 / 4 / 2; }
+    .slot-info { grid-area: 4 / 1 / 5 / 2; }
   }
 </style>
