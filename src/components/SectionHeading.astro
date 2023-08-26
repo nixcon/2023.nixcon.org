@@ -1,6 +1,9 @@
 ---
+const { extraClasses, size = "3xl", color = "gray-800", id } = Astro.props;
+
+const href = `#${id}`;
 ---
 
-<h2 class="text-2xl md:text-3xl font-black text-gray-800 mb-2 font-behrensschrift">
-    <slot />
+<h2 ${id} class=`text-2xl md:text-${size} font-black text-${color} mb-2 font-behrensschrift ${extraClasses}`>
+    { id ? ( <a {href} class=`font-black visited:text-${color} text-${color}`><slot /></a> ) : <slot /> }
 </h2>

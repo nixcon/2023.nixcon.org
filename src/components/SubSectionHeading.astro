@@ -1,7 +1,8 @@
 ---
-const { extraClasses } = Astro.props;
----
+import SectionHeading from "./SectionHeading.astro";
 
-<h2 class=`text-2xl font-black text-gray-600 mt-6 mb-2 font-behrensschrift ${extraClasses}`>
-    <slot />
-</h2>
+const { extraClasses, id } = Astro.props;
+---
+<SectionHeading {id} {extraClasses} size="2xl" color="gray-600">
+  <slot />
+</SectionHeading>
