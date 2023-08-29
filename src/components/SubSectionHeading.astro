@@ -3,6 +3,6 @@ import SectionHeading from "./SectionHeading.astro";
 
 const { extraClasses, id } = Astro.props;
 ---
-<SectionHeading {id} {extraClasses} size="2xl" color="gray-600">
+<SectionHeading {id} {extraClasses} isEmbedded>
   <slot />
 </SectionHeading>

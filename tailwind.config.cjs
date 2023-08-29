@@ -3,8 +3,6 @@ let extraSpacing = {};
 for (var i = 1; i <= 10; i++) {
   extraSpacing[i + ""] = 0.25 * i + "rem";
 }
-console.log(extraSpacing);
-
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
