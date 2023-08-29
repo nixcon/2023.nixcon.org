@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # rebuild website once an hour
+    - cron:  '23 * * * *'
+
 
 permissions:
   contents: write
