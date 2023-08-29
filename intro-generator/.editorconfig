@@ -1,0 +1,3 @@
+[*.js]
+indent_type = space
+tab_width = 4

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>NixCon 2023 intro generator</title>
+	  <link rel="preload" href="https://2023.nixcon.org/fonts/Behrensschrift-SH.otf" as="font" type="font/otf" crossorigin>
+	  <style>
+	    body { background-color: black; }
+	    @font-face {
+		font-family: 'Behrensschirft';
+		src: url('https://2023.nixcon.org/fonts/Behrensschrift-SH.otf');
+	    }
+	    p { font-family: 'Behrensschrift'; }
+	  </style>
+	</head>
+
+	<body>
+	  <p>Test</p>
+	  <button id="button">Render</button>
+	  <select name="talks" id="talks">
+	  </select>
+	  <select name="what" id="what">
+	    <option value="intro">intro</option>
+	    <option value="outro">outro</option>
+	    <option value="pause">pause</option>
+	  </select>
+	  <br />
+		<canvas id="canvas" height="1080" width="1920"></canvas>
+		<video autoplay controls download id="video"></video>
+
+		<script type="application/javascript" src="code.js"></script>
+		<script type="application/javascript">
+		  var fontReadyP = (new FontFace('Behrensschrift', 'url(https://2023.nixcon.org/fonts/Behrensschrift-SH.otf)').load().then((f) => {
+		      console.log('font loaded');
+		      document.fonts.add(f);
+		  }));
+		  const width = 1920, height = 1080;
+		  //var animation = new Animation("template.svg");
+		  //var outroAnimation = ;
+
+		  var init = false;
+
+		  var button = document.getElementById('button');
+		  button.disabled = true;
+
+		  const what = document.getElementById('what');
+		  const talksList = document.getElementById('talks');
+		  loadSchedule().then((talks) => talks.forEach((t) => {
+		      const ele = document.createElement('option');
+		      ele.talk = t;
+		      ele.value = t.id;
+		      ele.text = t.id + " - " + t.title;
+		      talksList.appendChild(ele);
+		  }));
+
+		  document.onreadystatechange = () => {
+		    if (init) return;
+		      init =true;
+		      button.disabled = false;
+		      button.onclick = () => fontReadyP.then(() => {
+			button.disabled = true;
+
+        		const w = what.selectedOptions[0].value;
+        		const talk = talksList.selectedOptions[0].talk;
+
+			var animation;
+			if (w == "intro") animation = new IntroAnimation("intro.png", talk.title,  "" + talk.persons.map((p) => p.public_name));
+                        if (w == "outro") animation = new OutroAnimation("template.svg", "by.svg");
+                        if (w == "pause") animation = new PauseAnimation("template.svg"); // FIXME
+
+			var animator = new Animator(document.getElementById('canvas'), document.getElementById('video'), width, height, animation);
+
+			animator.run().then(() => {
+        		    button.disabled = false;
+			    console.log('Done recording');
+			});
+		    });
+		  }
+		</script>
+	</body>
+</html>
