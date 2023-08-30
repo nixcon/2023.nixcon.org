@@ -16,5 +16,5 @@ curl \
     --header "Content-Type:application/json" \
     --header "Accept:application/json" \
     -X GET \
-    https://talks.nixcon.org/api/events/nixcon-2022/talks/ \
+    https://talks.nixcon.org/api/events/nixcon-2023/talks/ \
     -o data/schedule.json

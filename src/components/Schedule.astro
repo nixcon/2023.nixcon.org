@@ -1,5 +1,6 @@
 ---
 import data from "./../../data/schedule.json";
+import { marked } from 'marked';
 let sorted = [];
 let daycount = 1;
 
@@ -96,9 +97,7 @@ data.results.sort((a, b) => {
             }
             {item.submission_type.en}
           </p>
-          <p
-            class="p-2"
-          >{item.abstract}</p>
+          <div class="p-2" set:html={marked.parse(item.abstract)} />
           </div>
         </div>
       )
