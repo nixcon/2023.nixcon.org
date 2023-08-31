@@ -31,7 +31,10 @@
         name = "nixcon-2023";
         src = ./.;
 
-        preBuild = "export HOME=$(pwd)";
+        preBuild = ''
+          export HOME=$(pwd)
+          export TZ=Europe/Berlin
+        '';
         installPhase = ''
           cp -rv dist $out
           touch $out/.nojekyll
