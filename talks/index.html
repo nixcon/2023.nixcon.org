@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="frame astro-E5LVSCU2">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width">
+    <title>NixCon 2023</title>
+    
+  <link rel="stylesheet" href="/_astro/code-of-conduct.fc8da7bf.css" />
+<link rel="stylesheet" href="/_astro/talks.e208faa1.css" /></head>
+  <body class="bg-nixblue-100 text-nixblue-950 astro-E5LVSCU2">
+    <div class="content md:px-[15vw] lg:px-[27vw] md:h-[83vh] lg:h-[85vh] astro-E5LVSCU2">
+      <div class="flex flex-col items-center justify-center text-center mt-10 pb-8 astro-E5LVSCU2">
+        <img src="/logo.svg" alt="NixCon 2023" class="w-56 md:w-72 astro-E5LVSCU2">
+        <p class="mt-4 text-3xl md:text-5xl font-bold text-gray-600 font-behrensschrift astro-E5LVSCU2">
+          Darmſtadt 2023
+        </p>
+        <p class="text-3xl font-behrensschrift font-bold text-gray-600 astro-E5LVSCU2">
+          September 08 – 10
+        </p>
+      </div>
+      
+    <div class="flex flex-col astro-S4X4TXSV">
+  <h2 class="border font-black text-lg bg-nixblue-800 rounded-lg text-white text-center p-2 flex flex-col astro-S4X4TXSV">
+            Start of Day 1
+          </h2><div key="1" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                08:00 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">NixCon 2023 Opening Ceremony</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Ron Efroni
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Opening notes, shoutout to sponsors, running through the agenda, thanking everyone, kicking off, rules/guidelines</p>
+</div>
+          </div>
+        </div><div key="2" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                08:40 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Flake schemas</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Eelco Dolstra
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Flakes are a format for distributing Nix-based assets such as Nix packages, development shells, CI jobs and NixOS modules. The flake specification doesn&#39;t impose any restrictions on the contents (&quot;outputs&quot;) of a flake, and these can be arbitrary Nix values. While this makes flakes very flexible, it means that there is no generic way to find out what a flake provides, or to check its correctness. To work around this, tools such as <code>nix flake show</code> and <code>nix flake check</code> have built-in support for a fixed set of flake output types such as <code>packages</code> and <code>devShells</code>. Unfortunately, this set cannot be extended by users to handle new flake output types.</p>
+<p>In this talk, I propose <em>flake schemas</em>, which are essentially Nix functions that enumerate the contents of a flake output, including documentation, checks and options. Flake schemas do not impose a type system on flake outputs - it is entirely up to the schema function how it checks the flake output. Flake schemas allow us to remove all output-specific code from commands like <code>nix flake {show, check, search}</code>, making it easier for developers to introduce new output
+types.</p>
+</div>
+          </div>
+        </div><div key="3" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                09:25 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">What Flakes needs (technically)</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Linus Heckemann
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Flakes is seeing widespread and increasing adoption, but some people and projects are still hesitant to move to them because they have requirements that are cumbersome or impossible to address with Nix Flakes in their current incarnation (there are also other reasons, but I will be focusing on the technical ones).</p>
+<p>I will talk about the gaps I see in the current design of Flakes, and how these gaps could be filled in the future without compromising the core goals of Flakes. I will also explore the implications that this will have for the broad range of projects already using Flakes as it exists today.</p>
+</div>
+          </div>
+        </div><div key="4" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                09:50 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">not-all-packages-anymore.nix</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Silvan Mosberger
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>For <a href="https://github.com/nixos/nixpkgs/commit/1894a8b86c4f5233f4f28af3b93156aaaee44af1#diff-e55bb1f00549f56ee8b5e3a6977467543b29e7ddb51bd6df23bea76713fc972c">almost 20 years now</a>, adding a new package to Nixpkgs required editing the <code>all-packages.nix</code> file, which grew to over 40000 barely-sorted lines this year. In addition, an appropriate place for your package definition had to be found in the loosely-categorised <code>pkgs</code> hierarchy. Especially with the recent growth of Nix, this has been a frequent cause of confusion for new contributors.</p>
+<p>However, in the months leading up to NixCon, this is all changing with the acceptance of <a href="https://github.com/NixOS/rfcs/pull/140">RFC 140</a>, originally designed by the new <a href="https://nixos.org/community/teams/nixpkgs-architecture.html">Nixpkgs Architecture Team</a>. This proposal allows most new packages to be added by simply creating a new directory in the right place with a name matching the desired attribute name.</p>
+<p>In this talk I will go over the new package contribution process, along with its limitations, historical context, interesting implementation details and future work.</p>
+</div>
+          </div>
+        </div><div key="5" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500 astro-S4X4TXSV">
+                12:25 PM
+            </span>
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Blending NixOS with Flathub for friends and family</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Martin Wimpress
+                     - 
+                  </span>
+            Lightning talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Creating a NixOS workstation configuration for non-Linux experts using Flathub with a graphical storefront so they can install the apps they want.</p>
+</div>
+          </div>
+        </div><div key="6" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500 astro-S4X4TXSV">
+                12:30 PM
+            </span>
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Compiling to Nix: A Quick Overview</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Yvan Sraka
+                     - 
+                  </span>
+            Lightning talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>What are the languages that target Nix? Why might someone choose not to write an expression directly in Nix? How do these languages differ from one another?</p>
+</div>
+          </div>
+        </div><div key="7" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                12:50 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">disko and nixos-anywhere: Declarative and Remote Installation of NixOS</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Jörg Thalheim
+                    , 
+                  </span><span key="1" class="astro-S4X4TXSV">
+                    lassulus
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>If you ask three NixOS users what their favorite NixOS deployment tool to update a NixOS system is, you might get four answers. However, installing NixOS on a machine can be a tedious and manual process, especially if the machine is not physically accessible or does not have a NixOS installer. In this talk, we will introduce two tools that can simplify and automate the installation of NixOS on any machine with Linux and SSH access: disko and nixos-anywhere.</p>
+</div>
+          </div>
+        </div><div key="8" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                01:15 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Declaring an IDE with evalModules</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Ryan Mulligan
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>The underlying machinery of the NixOS module system, evalModules, is useful for more than just declaring Operating Systems. At Replit, we use it to <a href="https://github.com/replit/nixmodules">declare IDE plugins</a> for language runtimes, code intelligence (LSP), runners, packagers, and debuggers. Learn how you can use evalModules for your own applications and how we use it to declare an IDE. During the hackday, let&#39;s adapt the IDE plugins to emacs, vim, or vscode!</p>
+</div>
+          </div>
+        </div><div key="9" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                01:50 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Automating testing of NixOS on physical machines</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Daniel Fullmer
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>The NixOS virtual machine testing framework is very powerful, and allows for convenient testing of entire NixOS machines. However, some capabilities can only be tested by booting a physical machine with a given NixOS closure. This talk describes some work done toward the goal of enabling testing NixOS closures on physical machines, with an example of testing NVIDIA Jetson devices using the &quot;jetpack-nixos&quot; project.</p>
+</div>
+          </div>
+        </div><div key="10" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                02:15 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Impermanence</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    talyz
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>The <a href="https://github.com/nix-community/impermanence">Impermanence</a> project aims to make it easy to build systems where the root storage is erased on every boot.</p>
+</div>
+          </div>
+        </div><div key="11" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                03:05 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Using Nix from Python, using Python from Nix</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Yorick van Pelt
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Interesting things you can do using the proposed C API</p>
+</div>
+          </div>
+        </div><div key="12" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                03:30 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">How to teach Nix in 5 minutes!</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Rok Garbas
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Congratulations, you’ve convinced your friends / peers / coworkers to give Nix a try. Now the hard work starts: you have to actually teach it to them! Nix might be hard to learn, but it sure can be a fun journey! In this talk, Rok Garbas from flox will share the tools and techniques you need to teach Nix to your friends and colleagues…and, most importantly, what NOT to teach.</p>
+</div>
+          </div>
+        </div><h2 class="border font-black text-lg bg-nixblue-800 rounded-lg text-white text-center p-2 flex flex-col astro-S4X4TXSV">
+            Start of Day 2
+          </h2><div key="14" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                08:00 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">NixCon 2023 Opening Ceremony</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Opening ceremony for day 2!</p>
+</div>
+          </div>
+        </div><div key="15" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                08:15 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Finding things in nixpkgs and NixOS source</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Jade Lovelace
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Even with recent improvements in documentation, sometimes the most expedient way to understand nixpkgs and NixOS is to read the source code. However, that&#39;s not trivial: there are now 2.9 million lines of Nix source in nixpkgs. This talk shows several methods of finding the sources behind things in nixpkgs and NixOS from using ctags to various lesser-known tricks in the repl.</p>
+<p>After this talk, getting around in nixpkgs should be familiar and quick.</p>
+</div>
+          </div>
+        </div><div key="16" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                09:25 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Nuenv: an experimental derivation builder for Nix</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Luc Perkins
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Nuenv is an alternative builder for Nix derivations that uses Nushell rather than Bash. It offers enhanced expressiveness and type safety to Nix.</p>
+</div>
+          </div>
+        </div><div key="17" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                09:50 AM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Rust + Nix: More than the sum of their parts?</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Zach Mitchell
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Rust is a programming language with a knack for ergonomics in a space where robustness, correctness, and speed often come at the cost of many papercuts. Nix is a project focused on building software in a robust, correct, and deterministic way. These two projects should be best friends, right? In this talk Zach Mitchell from flox and the Documentation Team will give an experience report writing Rust bindings for Nix. What makes bindings difficult? Which bindings can be autogenerated? Which can (or should) be written by hand? Tune in to find out what went well, what was painful, and what didn&#39;t work at all.</p>
+</div>
+          </div>
+        </div><div key="18" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500 astro-S4X4TXSV">
+                12:15 PM
+            </span>
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Dynamic Derivations: what and why</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Thomas Bereknyei
+                     - 
+                  </span>
+            Lightning talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>In this quick talk, tomberek will introduce an upcoming experimental feature that has been in development for several years: dynamic derivations (RFC92). The talk will describe the motivation, the current status, implementation details, and a teaser of user-facing value they provide.</p>
+<p>References: </p>
+<ul>
+<li><a href="https://github.com/NixOS/rfcs/blob/master/rfcs/0092-plan-dynamism.md">https://github.com/NixOS/rfcs/blob/master/rfcs/0092-plan-dynamism.md</a></li>
+<li><a href="https://github.com/NixOS/rfcs/pull/92">https://github.com/NixOS/rfcs/pull/92</a></li>
+<li><a href="https://github.com/NixOS/nix/issues/6316">https://github.com/NixOS/nix/issues/6316</a></li>
+</ul>
+</div>
+          </div>
+        </div><div key="19" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500 astro-S4X4TXSV">
+                12:20 PM
+            </span>
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Nix for HPC: the case of cudaPackages</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Sergei K
+                     - 
+                  </span>
+            Lightning talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>We should briefly see (or recap) what effort it takes today to provision via Nix a typical stack that includes Pytorch and CUDA, see when Nix could still be the better choice, and when Nix may seem to hinder progress. We should try to argue that the obstacles we observe can be eliminated at the nixpkgs level</p>
+</div>
+          </div>
+        </div><div key="20" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-orange-500 astro-S4X4TXSV">
+                12:30 PM
+            </span>
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">NixOS-Configured VMs for Isolated Single Website Browser</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Nitin Passa
+                     - 
+                  </span>
+            Lightning talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>In this lightening talk, we&#39;ll walk through process of creating a virtual machine using NixOS which will start Firefox and visit a pre-configured website. We&#39;ll work-around the performance issue of building multiple VMs when there are many configured websites. To do so, we&#39;ll employ flake outputs for caching and QEMU&#39;s ability to forward configuration options to the VM. At the end, we&#39;ll have a browser setup with improved isolation and alternative UX.</p>
+</div>
+          </div>
+        </div><div key="21" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                01:10 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Bootstrapping Nix and Linux from TinyCC</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Alexander Sosedkin
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Building every operating system starts from something. I&#39;m not as hardcore as the stage0 project folks going from assembly to Guix, but a shorter path from a ~320 KB TinyCC binary to Nix to a proof-of-concept Linux distribution also proved to be a story worth telling.</p>
+<p>We&#39;ll begin our journey by executing a -nostdlib C program with TinyCC, compile our way out towards a libc and a shell, work through older compilers to modern compilers and build Nix. Then we&#39;ll walk the same path again once over, but this time, we&#39;ll use Nix. Finally, in a different flake, we&#39;ll reimplement some of the founding nixpkgs patterns, work our way from toolchain to Linux and arrive at a bootable .iso. Corners will be cut, hacks will run amock, Nix will be both praised and complained about, reproducibility will be earned hard, and some patches will get upstreamed.</p>
+</div>
+          </div>
+        </div><div key="22" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                01:35 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Reinventing the wheel with Zilch</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Puck Meerburg
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>It&#39;s been twenty years since Nix was unleashed upon this world, and yet, the only real alternative is Guix‽ Well, not on my watch! I&#39;ve been working on Zilch for a while now, and it&#39;s starting to be ready to be released to the wild. This talk will describe what this fresh new Nix-compatible alternative is, how it came into being, and what the wider Nix community could learn from it.</p>
+</div>
+          </div>
+        </div><div key="23" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                02:00 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Tvix</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    flokli
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Tvix is a modern design and implementation of the Nix package manager (GPLv3). It brings a modular architecture in which components such as the build environment or package store are replaceable, which enables new use-cases and platforms.</p>
+</div>
+          </div>
+        </div><div key="24" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                03:10 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">Nix and Kubernetes: Deployments Done Right</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Vladimir &quot;farcaller&quot; Pouzanov
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Nix is an amazing build tool not only for applications, but also for the infamous &quot;yaml engineering&quot;. Join Volodymyr to learn about the journey of using nix along with argocd to deploy payloads into kubernetes.</p>
+</div>
+          </div>
+        </div><div key="25" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                03:55 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">microvm.nix</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Astro
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>microvm.nix builds NixOS for a few virtual machine managers in a few different use-cases</p>
+</div>
+          </div>
+        </div><div key="26" class="slot astro-S4X4TXSV">
+          <div class="slot-line-top astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <span class="slot-time text-md font-black py-2 text-center bg-black text-gray-50 rounded-l-md border-l-8 border-l-blue-500 astro-S4X4TXSV">
+                04:20 PM
+            </span>
+          
+          
+          
+          <div class="slot-line-bottom astro-S4X4TXSV">
+            <div class="slot-line-graphic astro-S4X4TXSV"></div>
+          </div>
+          <div class="slot-info border border-black rounded-lg md:my-2 rounded-tl-none astro-S4X4TXSV">
+            <h2 class="text-md font-bold p-2 bg-black text-gray-50 astro-S4X4TXSV">NixCon 2023 Closing Ceremony</h2>
+          <p class="block bg-gray-800 text-white text-bold px-2 py-1 astro-S4X4TXSV">
+            <span key="0" class="astro-S4X4TXSV">
+                    Ron Efroni
+                     - 
+                  </span>
+            Talk
+          </p>
+          <div class="p-2 astro-S4X4TXSV"><p>Closing, thank yous, sponsors, what&#39;s next, anything else</p>
+</div>
+          </div>
+        </div>
+</div>
+
+      <footer class="text-nixblue-950">
+  <div class="container mx-auto p-4 flex flex-col justify-between">
+    <div>
+      <h2 class="text-2xl font-bold mb-2 font-behrensschrift">
+        Previous NixCon editions
+      </h2>
+      <ul class="linklist">
+        <li><a href="https://2022.nixcon.org">2022</a></li>
+        <li><a href="https://2020.nixcon.org">2020</a></li>
+        <li><a href="https://2019.nixcon.org">2019</a></li>
+        <li><a href="https://2018.nixcon.org">2018</a></li>
+        <li><a href="https://2017.nixcon.org">2017</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold my-4 font-behrensschrift">
+        Additional links
+      </h2>
+      <ul class="linklist">
+        <li>
+          <a href="/code-of-conduct" class="hover:underline">Code of Conduct</a>
+        </li>
+        <li>
+          <a href="/imprint" class="hover:underline">Imprint</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+    </div>
+  </body></html>
