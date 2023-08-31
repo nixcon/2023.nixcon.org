@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # This fetches the data used in the nix build since it does not have access to the internet
 
@@ -16,6 +16,5 @@ curl \
     --header "Content-Type:application/json" \
     --header "Accept:application/json" \
     -X GET \
-    https://talks.nixcon.org/api/events/nixcon-2022/talks/ \
+    https://talks.nixcon.org/api/events/nixcon-2023/talks/ \
     -o data/schedule.json
-    
