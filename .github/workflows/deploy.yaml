@@ -27,10 +27,12 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v4
       - uses: DeterminateSystems/magic-nix-cache-action@v2
 
+      - run: npm i
+
       - name: Fetch API data
         env:
           PRETIX_TOKEN: ${{ secrets.PRETIX_TOKEN }}
-        run: bash ./data/fetch.sh
+        run: npm run fetch-data
 
       - name: Make the build unique
         run: echo "<!-- $(date +%s) -->" >> src/pages/index.astro
