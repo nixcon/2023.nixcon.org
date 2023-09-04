@@ -1,9 +1,20 @@
 ---
+import Section from "../components/Section.astro";
 import Schedule from "../components/Schedule.astro";
 import LayoutDefault from "../layouts/LayoutDefault.astro";
 
 ---
 
 <LayoutDefault>
-    <Schedule />
+    <Section>
+      <Schedule />
+    </Section>
+    <Section>
+      <p>
+      You can also access the JSON and XML versions of this page (alongside with a different rendering) on <a href="https://talks.nixcon.org/nixcon-2023/schedule/" rel="external">talks.nixcon.org/nixcon-2023/schedule</a>.
+      </p>
+      <p>
+       There is an Android available to view the schedule on your phone: <a href="https://github.com/Wilm0r/giggity" rel="external">https://github.com/Wilm0r/giggity</a>.
+      </p>
+    </Section>
 </LayoutDefault>
