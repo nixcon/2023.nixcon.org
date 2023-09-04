@@ -2,12 +2,22 @@
 import Section from "../components/Section.astro";
 import Schedule from "../components/Schedule.astro";
 import LayoutDefault from "../layouts/LayoutDefault.astro";
+import SectionHeading from "../components/SectionHeading.astro";
 
 ---
 
 <LayoutDefault>
     <Section>
+      <SectionHeading>
+        Talks (Room 122)
+      </SectionHeading>
       <Schedule />
+    </Section>
+    <Section>
+      <SectionHeading>
+        Workshops (Room 24)
+      </SectionHeading>
+      <Schedule type="workshops" />
     </Section>
     <Section>
       <p>
