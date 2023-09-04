@@ -1,0 +1,40 @@
+[
+  {
+    "code": "MYDSCP",
+    "speakers": [
+      {
+        "code": "KWCVSS",
+        "name": "Jacek Galowicz",
+        "biography": "Freelance SWE consultant,  trainer at nixcademy.com and linuxhotel.de, maintainer of the NixOS integration test driver, C++ book author",
+        "avatar": "https://talks.nixcon.org/media/avatars/me_twitter_H7BlkHr.jpg"
+      }
+    ],
+    "title": "Nix Training",
+    "submission_type": {
+      "en": "Workshop/Training - Select this if you are planning on running a training for attendees"
+    },
+    "submission_type_id": 3115,
+    "track": {
+      "en": "Workshop"
+    },
+    "track_id": 4031,
+    "state": "confirmed",
+    "abstract": "Join us at nixcon 2023 for a free short training on Nix flakes! Learn the basics of Nix, including installation, command usage, and writing your own flake. Discover how to build flakes in GitHub CI and familiarize yourself with key terms in the Nix ecosystem. Don't miss this opportunity to enhance your Nix skills and expand your knowledge of declarative package management.",
+    "description": "Join us at nixcon 2023 for an exciting and informative free training session on Nix flakes. Designed for beginners and those looking to deepen their understanding of Nix, this training will provide you with a solid foundation in Nix fundamentals.\r\n\r\nDuring the training, you will learn how to install and set up Nix, gaining hands-on experience with essential commands and techniques. Discover the power of Nix flakes as you dive into writing your own flake, exploring the creation of packages and runnable applications. By the end of the training, you'll be able to build your flake in GitHub CI, ensuring reliable and reproducible results.\r\n\r\nIn addition to practical exercises, this training will also introduce you to the important vocabulary of the Nix ecosystem. You'll become familiar with key terms and concepts, enabling you to navigate the Nix community and documentation with ease.\r\n\r\nLed by experienced trainers from nixcademy.com, this session promises a dynamic learning environment that combines theory with interactive exercises. You'll benefit from the trainers' expertise and enthusiasm for Nix, making the learning process enjoyable and engaging.\r\n\r\nWhether you're a developer, system administrator, or simply curious about declarative package management, this free training is an excellent opportunity to enhance your Nix skills and gain valuable insights into the world of Nix flakes. Don't miss out on this chance to expand your knowledge and join us at nixcon 2023 for an unforgettable learning experience.",
+    "duration": 120,
+    "slot_count": 1,
+    "do_not_record": false,
+    "is_featured": false,
+    "content_locale": "en",
+    "slot": {
+      "room_id": 2421,
+      "room": {
+        "en": "Workshop room (Room 24)"
+      },
+      "start": "2023-09-09T15:00:00+02:00",
+      "end": "2023-09-09T17:00:00+02:00"
+    },
+    "image": "https://talks.nixcon.org/media/nixcon-2023/submissions/MYDSCP/logo-landscape_V2Eub3z.svg",
+    "resources": []
+  }
+]
