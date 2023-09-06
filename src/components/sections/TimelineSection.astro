@@ -25,9 +25,9 @@ const timelineData = [{
 
 <Section extraClasses="pb-4">
     <SectionHeading id="timeline">Timeline</SectionHeading>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid md:grid-cols-3 gap-4">
         {timelineData.map((e) => (
-                <div class="text-md bg-nixblue-800 font-black py-2 text-center rounded-md">
+                <div class="text-md bg-gray-200 dark:bg-nixblue-800 font-black py-2 text-center rounded-md">
                     <div class="text-lg">{e.day}</div>
                     <div class="text-xs mb-2">{e.date}</div>
                     <a href={e.link}>{e.name}</a>

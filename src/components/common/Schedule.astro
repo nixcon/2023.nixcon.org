@@ -114,7 +114,7 @@ data.sort((a, b) => {
             }
             {item.submission_type.en}
           </p>
-          <div class="p-2" set:html={marked.parse(item.abstract)} />
+          <div class="p-2 talk-abstract" set:html={marked.parse(item.abstract)} />
           </div>
         </div>
       )
