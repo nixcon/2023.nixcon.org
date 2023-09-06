@@ -3,23 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  a:any-link,
-  a:visited {
-    font-weight: 800;
-    @apply text-nixblue-600;
+  a {
+    @apply text-nixblue-800 dark:text-nixblue-200;
   }
 
   a:hover {
     font-weight: 800;
     text-decoration: underline solid 2px;
-    @apply text-nixblue-800;
-  }
-
-  .linklist {
-    @apply flex flex-col  md:flex-row flex-wrap gap-4 mb-4;
-  }
-  .linklist a {
-    @apply no-underline block hover:underline py-2 px-4 border-2 border-nixblue-800 font-bold bg-nixblue-50;
+    @apply text-nixblue-800 dark:text-nixblue-100;
   }
 
   .frame {
@@ -30,6 +21,12 @@
     border-image-width: 33vw;
     border-image-repeat: stretch round;
     position: absolute;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .frame {
+      border-image-source: url("/site_frame_dark.svg");
+    }
   }
 
   .content {
@@ -47,4 +44,8 @@
       transparent 100%
     );
   }
+}
+
+.nixcon-gradient {
+  background-image: linear-gradient(90deg, rgb(255, 69, 128) 0%, rgb(181, 97, 0) 13.538975%, rgb(123, 123, 0) 23.409523%, rgb(110, 127, 0) 31.224179000000003%, rgb(0, 138, 47) 40.808252%, rgb(0, 133, 130) 52.012885%, rgb(0, 129, 164) 62.377048%, rgb(0, 122, 208) 73.267424%, rgb(126, 87, 255) 82.87276%, rgb(220, 62, 255) 92.044002%, rgb(255, 64, 203) 99.989998%);
 }

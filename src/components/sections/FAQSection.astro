@@ -1,0 +1,123 @@
+---
+
+import Icon from "../common/Icon.astro";
+import List from "../common/List.astro";
+import BlockList from "../common/BlockList/BlockList.astro";
+import SubSectionHeading from "../common/Section/SubSectionHeading.astro";
+import SectionParagraph from "../common/Section/SectionParagraph.astro";
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import BlockListHeader from "../common/BlockList/BlockListHeader.astro";
+import Section from "../common/Section/Section.astro";
+import BlockListBody from "../common/BlockList/BlockListBody.astro";
+import ListItem from "../common/ListItem.astro";
+---
+
+<Section extraClasses="pb-4">
+    <SectionHeading id="faq">FAQ</SectionHeading>
+    <SubSectionHeading id="volunteer">I am interested in helping? What can I do?</SubSectionHeading>
+    <SectionParagraph>
+        We are actively looking for volunteers for before, during and after the event. If you are interested please sign-up on our Volunteer system (Engelsystem) at <a href="https://volunteers.nixcon.org">volunteers.nixcon.org</a>.
+    </SectionParagraph>
+
+    <SectionParagraph>
+        There is also a Matrix room for <a href="https://matrix.to/#/#nixcon-2023-volunteers:kack.it">#nixcon-2023-volunteers:kack.it</a>.
+    </SectionParagraph>
+
+    <SubSectionHeading id="video">Will there be video recording?</SubSectionHeading>
+    <SectionParagraph>
+        Yes! This link will go live once the conference is starting: <a href="https://streaming.media.ccc.de/nixcon2023">https://streaming.media.ccc.de/nixcon2023</a>.
+    </SectionParagraph>
+
+    <SubSectionHeading id="edit">This website is broken! Can I fix it?</SubSectionHeading>
+    <SectionParagraph>
+        Yes! The website source is at: <a href="https://github.com/nixcon/2023.nixcon.org">https://github.com/nixcon/2023.nixcon.org</a>.
+    </SectionParagraph>
+
+    <SubSectionHeading>What is a Hackday?</SubSectionHeading>
+    <SectionParagraph>
+        The Hackday is a self-organizing event after the conference. It's an
+        opportunity to network, hack on projects and ideas that arose during the
+        conference, and discuss plans for the rest of the year. Get together, solve problems, create!
+    </SectionParagraph>
+
+    <SubSectionHeading id="arrival">Arrival</SubSectionHeading>
+
+    <BlockList>
+        <li>
+            <BlockListHeader>
+                <Icon name="plane" />
+                By plane
+            </BlockListHeader>
+            <BlockListBody>
+                <List>
+                    <ListItem>
+                        Arrive at FRA (Frankfurt International Airport, <b>not</b> Frankfurt-Hahn
+                        (HHN)),
+                    </ListItem>
+                    <ListItem>
+                        Then either take the <a
+                            href="https://www.heagmobibus.de/sites/default/files/media/_Airliner_Faltblatt_2023_04_17_Web_0.pdf"
+                            target="_blank">Airliner Shuttle</a
+                    > that goes all the way to Darmstadt city center with a stop at the
+                        main train station.
+                    </ListItem>
+                    <ListItem>
+                        Or take a train from the airport’s “Regionalbahnhof” to Frankfurt
+                        (Main) Hbf and swap there to Darmstadt Hbf.
+                    </ListItem>
+                </List>
+            </BlockListBody>
+        </li>
+        <li>
+            <BlockListHeader>
+                <Icon name="train" /> By train
+            </BlockListHeader>
+            <BlockListBody>
+                <List>
+                    <ListItem>
+                        Darmstadt Hbf (main train station) is reachable by RE/IC/ICE. The
+                        closest station to the venue is the <a
+                            href="https://www.google.com/maps/place/Darmstadt+Alexanderstra%C3%9Fe%2FTU/@49.87575,8.66062,15z/data=!4m2!3m1!1s0x0:0xa70bcd66fefeb9dd?sa=X&ved=2ahUKEwjf16O_3JP_AhUS7aQKHYs7C9gQ_BJ6BAg5EAM"
+                            target="_blank">Alexanderstraße/TU</a
+                    > bus stop.
+                    </ListItem>
+                    <ListItem>
+                        Locally tickets can be bought from <a
+                            href="https://www.rmv.de"
+                            target="_blank">RMV</a
+                    >, e.g. from vending stations at most stations in Darmstadt
+                    </ListItem>
+                </List>
+            </BlockListBody>
+        </li>
+        <li>
+            <BlockListHeader>
+                <Icon name="car" />
+                By car
+            </BlockListHeader>
+            <BlockListBody>
+                <List>
+                    <ListItem>
+                        <a
+                                href="https://osm.org/go/0DxdhZQc6?layers=N&way=22937260"
+                                target="_blank"
+                                rel="noopener">Messplatz &amp; Nordbad, Alsfelder Str.</a
+                        >
+                    </ListItem>
+                    <ListItem>
+                        <a
+                                href="https://www.darmstadt-tourismus.de/besuch/details/poidetail/parkplatz-mercksplatz.html"
+                                target="_blank"
+                                rel="noopener">Mercksplatz</a
+                        >, up to 4 hours (warning: you have to indicate in some way what
+                        time you parked the car, visible through the windscreen).
+                    </ListItem>
+                    <ListItem>
+                        This is a non-exhaustive list, you can find more with your
+                        location data provider of choice
+                    </ListItem>
+                </List>
+            </BlockListBody>
+        </li>
+    </BlockList>
+</Section>

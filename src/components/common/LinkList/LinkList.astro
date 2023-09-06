@@ -1,0 +1,18 @@
+---
+import BoxLink from "./BoxLink.astro";
+const {links, stack} = Astro.props;
+---
+
+<ul class=`flex flex-col flex-wrap gap-4 mb-4 ${stack ? null : "md:flex-row" }`>
+    {links.map((l) => (
+        <li>
+            <a
+                    class="no-underline block"
+                    href={l.link}
+                    rel="external">
+                <BoxLink>{l.name}</BoxLink>
+            </a
+            >
+        </li>
+    ))}
+</ul>

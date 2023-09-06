@@ -1,0 +1,29 @@
+---
+import Section from "../common/Section/Section.astro";
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import SectionParagraph from "../common/Section/SectionParagraph.astro";
+import LinkList from "../common/LinkList/LinkList.astro";
+const ticketLinks = [
+    {
+        link: "https://chaos.social/@nixos_org",
+        name: "@nixos_org@chaos.social"
+    },
+    {
+        link: "https://twitter.com/nixos_org",
+        name: "@nixos_org"
+    }
+]
+---
+<Section extraClasses="pb-4">
+    <SectionHeading id="tickets">Tickets</SectionHeading>
+    <SectionParagraph>
+      Tickets are all taken!<br />
+      Live streaming will be available. Follow one of the NixOS social accounts for
+      updates:
+        <LinkList links={ticketLinks} />
+    </SectionParagraph>
+    <SectionParagraph>
+      Speakers without tickets, please reach out to us at
+      <a href="mailto:orgateam@nixcon.org">orgateam@nixcon.org</a>.
+    </SectionParagraph>
+  </Section>

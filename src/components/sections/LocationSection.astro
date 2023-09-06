@@ -1,0 +1,36 @@
+---
+import BoxLink from "../common/LinkList/BoxLink.astro";
+import Section from "../common/Section/Section.astro";
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import SectionParagraph from "../common/Section/SectionParagraph.astro";
+import LinkList from "../common/LinkList/LinkList.astro";
+const locationLinks = [
+  {
+    link: "https://www.openstreetmap.org/way/26931271#map=19/49.87717/8.65750&layers=N",
+    name: "OpenStreetMap"
+  },
+  {
+    link: "https://goo.gl/maps/nBg35Hk9FEeNuzAd7",
+    name: "Google Maps"
+  },
+  {
+    link: "https://maps.apple.com/place?address=Darmstadt,%20Hesse,%20Germany&auid=3032624567994665273&ll=49.877144,8.657540&lsp=9902&q=S1%7C05%20Maschinenhaus&t=h",
+    name: "Apple Maps"
+  },
+]
+---
+
+<Section>
+  <SectionHeading id="location">Location</SectionHeading>
+  <div class="grid md:grid-cols-2">
+    <SectionParagraph>
+      <b class="inline-block mb-2">TU-Darmstadt, S1|05 Maschinenhaus</b><br />
+      Magdalenenstr. 12<br />
+      64289 Darmstadt<br />
+      Germany
+    </SectionParagraph>
+    <div>
+      <LinkList stack links={locationLinks} />
+    </div>
+  </div>
+</Section>

@@ -1,4 +1,12 @@
 ---
+import LinkList from "../common/LinkList/LinkList.astro";
+const footerDates = [2017, 2018, 2019, 2020, 2022]
+const footerLinks = footerDates.map((e) => {
+  return {
+    name:`${e}`,
+    link: `https://${e}.nixcon.org`
+  }
+})
 ---
 
 <footer class="text-nixblue-950">
@@ -7,13 +15,7 @@
       <h2 class="text-2xl font-bold mb-2 font-behrensschrift">
         Previous NixCon editions
       </h2>
-      <ul class="linklist">
-        <li><a href="https://2022.nixcon.org">2022</a></li>
-        <li><a href="https://2020.nixcon.org">2020</a></li>
-        <li><a href="https://2019.nixcon.org">2019</a></li>
-        <li><a href="https://2018.nixcon.org">2018</a></li>
-        <li><a href="https://2017.nixcon.org">2017</a></li>
-      </ul>
+      <LinkList links={footerLinks} />
     </div>
 
     <div>
