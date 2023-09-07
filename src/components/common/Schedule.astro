@@ -1,17 +1,18 @@
 ---
 let { type = "talks" } = Astro.props;
-import schedule from "../../../data/schedule.json";
-import workshops from "../../../data/workshops.json";
+import { getEntry } from "astro:content";
 import { marked } from 'marked';
 let sorted = [];
 let daycount = 1;
 let data = [];
 let startDay = new Date("2023-09-08T00:00:00.000Z");
+const { data: workshops } = await getEntry('schedule', 'workshops');
+const { data: talks } = await getEntry('schedule', 'talks');
 
 if (type == "workshops") {
   data = workshops;
 } else {
-  data = schedule;
+  data = talks;
 }
 
 data.sort((a, b) => {

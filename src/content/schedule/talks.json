@@ -353,42 +353,6 @@
     "resources": []
   },
   {
-    "code": "7WYFPW",
-    "speakers": [
-      {
-        "code": "3H9WGK",
-        "name": "Yvan Sraka",
-        "biography": "Yvan Sraka holds a master's degree in maths and computer sciences applied to biology from the Sorbonne University in Paris. Having discovered C++ programming as a child, he is involved in open-source communities. His previous commercial experience includes working in 3D Graphics and Runtime design with Rust, Nix, and Haskell. He used to teach Systems programming, Architecture, and DevOps to master's students and design algorithm competitions and kids/teens coding workshops (where he helps them build small video games). He lives in Belgium, loves biking, hiking, climbing, and vegan cooking.",
-        "avatar": "https://talks.nixcon.org/media/avatars/a87bfca261ad0ccd8ddfda9ca3bf508a_2QLVVn6.jpg"
-      }
-    ],
-    "title": "Compiling to Nix: A Quick Overview",
-    "submission_type": {
-      "en": "Lightning talk"
-    },
-    "submission_type_id": 2995,
-    "track": null,
-    "track_id": null,
-    "state": "confirmed",
-    "abstract": "What are the languages that target Nix? Why might someone choose not to write an expression directly in Nix? How do these languages differ from one another?",
-    "description": "This lightning talk will offer a brief overview of languages that can compile to Nix. For instance, [Dhall](https://dhall-lang.org/), [PureScript](https://hackage.haskell.org/package/purenix) and [Nickel](https://nickel-lang.org/) (even though it doesn't directly translate to Nix). What do the generated expressions look like? Can they be used to define a package definition or a NixOS configuration?\r\n\r\nAdditionally, I will attempt briefly introduce an experimental toy project of mine: a language that compiles to Nix, featuring a _static_ type system inspired by the [contracts](https://github.com/yvan-sraka/contracts) library.",
-    "duration": 5,
-    "slot_count": 1,
-    "do_not_record": false,
-    "is_featured": false,
-    "content_locale": "en",
-    "slot": {
-      "room_id": 2420,
-      "room": {
-        "en": "Lecture hall (Room 122)"
-      },
-      "start": "2023-09-08T14:30:00+02:00",
-      "end": "2023-09-08T14:35:00+02:00"
-    },
-    "image": null,
-    "resources": []
-  },
-  {
     "code": "BAVND7",
     "speakers": [
       {
@@ -596,7 +560,7 @@
     "description": "",
     "duration": 25,
     "slot_count": 1,
-    "do_not_record": false,
+    "do_not_record": true,
     "is_featured": false,
     "content_locale": "en",
     "slot": {
@@ -653,7 +617,7 @@
         "code": "U3WAC7",
         "name": "Sergei K",
         "biography": "Doctoral student at the Aalto University, working on image correspondences and, more generally, \"inverse [problems in] graphics\". Contributing to cudaPackages in nixpkgs",
-        "avatar": null
+        "avatar": "https://talks.nixcon.org/media/avatars/avatar-fallout.cleaned_VMwcNWW.jpg"
       }
     ],
     "title": "Nix for HPC: the case of cudaPackages",
@@ -1265,6 +1229,42 @@
       },
       "start": "2023-09-08T14:35:00+02:00",
       "end": "2023-09-08T14:40:00+02:00"
+    },
+    "image": null,
+    "resources": []
+  },
+  {
+    "code": "7WYFPW",
+    "speakers": [
+      {
+        "code": "3H9WGK",
+        "name": "Yvan Sraka",
+        "biography": "Yvan Sraka holds a master's degree in maths and computer sciences applied to biology from the Sorbonne University in Paris. Having discovered C++ programming as a child, he is involved in open-source communities. His previous commercial experience includes working in 3D Graphics and Runtime design with Rust, Nix, and Haskell. He used to teach Systems programming, Architecture, and DevOps to master's students and design algorithm competitions and kids/teens coding workshops (where he helps them build small video games). He lives in Belgium, loves biking, hiking, climbing, and vegan cooking.",
+        "avatar": "https://talks.nixcon.org/media/avatars/a87bfca261ad0ccd8ddfda9ca3bf508a_2QLVVn6.jpg"
+      }
+    ],
+    "title": "Compiling to Nix: A Quick Overview",
+    "submission_type": {
+      "en": "Lightning talk"
+    },
+    "submission_type_id": 2995,
+    "track": null,
+    "track_id": null,
+    "state": "confirmed",
+    "abstract": "What are the languages that target Nix? Why might someone choose not to write an expression directly in Nix? How do these languages differ from one another?",
+    "description": "This lightning talk will offer a brief overview of languages that can compile to Nix. For instance, [Dhall](https://dhall-lang.org/), [PureScript](https://hackage.haskell.org/package/purenix) and [Nickel](https://nickel-lang.org/) (even though it doesn't directly translate to Nix). What do the generated expressions look like? Can I use them to write a package definition or a NixOS configuration?\r\n\r\n**EDIT:** I will not have the time to introduce an experimental toy project of mine: a Scheme dialect that compiles to Nix, featuring a _static_ type system inspired by the [contracts](https://github.com/yvan-sraka/contracts) library. But I will be more than happy to discuss it while HackDay!",
+    "duration": 5,
+    "slot_count": 1,
+    "do_not_record": false,
+    "is_featured": false,
+    "content_locale": "en",
+    "slot": {
+      "room_id": 2420,
+      "room": {
+        "en": "Lecture hall (Room 122)"
+      },
+      "start": "2023-09-08T14:30:00+02:00",
+      "end": "2023-09-08T14:35:00+02:00"
     },
     "image": null,
     "resources": []

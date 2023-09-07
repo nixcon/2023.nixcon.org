@@ -23,8 +23,8 @@ async function fetchPretalx() {
     let workshops = result.filter(talk => isWorkshop(talk));
     let talks = result.filter(talk => !isWorkshop(talk));
 
-    writeFileSync(join(__dirname, 'schedule.json'), JSON.stringify(talks, null, 2));
-    writeFileSync(join(__dirname, 'workshops.json'), JSON.stringify(workshops, null, 2));
+    writeFileSync(join(__dirname, 'src/content/schedule/talks.json'), JSON.stringify(talks, null, 2));
+    writeFileSync(join(__dirname, 'src/content/schedule/workshops.json'), JSON.stringify(workshops, null, 2));
 }
 
 fetchPretalx();

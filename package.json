@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-data": "node ./data/fetch.mjs"
+    "fetch-data": "node ./fetch.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.4",

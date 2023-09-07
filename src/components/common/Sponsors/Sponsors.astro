@@ -3,7 +3,6 @@ const { sponsors, level, randomize = true } = Astro.props;
 
 import Sponsor from "./Sponsor.astro";
 
-console.log(sponsors);
 const randomizedSponsors = randomize ? sponsors.map((sponsor) => ({ sponsor, sort: Math.random() }))
                                    .sort((a, b) => a.sort - b.sort)
 				   .map(({ sponsor }) => sponsor) : sponsors;
