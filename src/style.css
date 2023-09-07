@@ -4,7 +4,7 @@
 
 @layer base {
   a {
-    @apply text-nixblue-800 dark:text-nixblue-200;
+    @apply text-nixblue-800 dark:text-nixblue-200 font-bold;
   }
 
   a:hover {
