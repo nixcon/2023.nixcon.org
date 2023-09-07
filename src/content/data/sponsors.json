@@ -1,19 +1,31 @@
 {
   "gold": [
-    { "image": "cachix.png", "alt": "Cachix", "url": "https://cachix.org" },
+    {
+      "image": "cachix.png",
+      "alt": "Cachix",
+      "url": "https://cachix.org"
+    },
     {
       "image": "flox.png",
       "alt": "Flox",
       "url": "https://floxdev.com",
       "extraClasses": "px-10"
     },
-    { "image": "numtide.png", "alt": "Numtide", "url": "https://numtide.com" },
+    {
+      "image": "numtide.png",
+      "alt": "Numtide",
+      "url": "https://numtide.com"
+    },
     {
       "image": "flyingcircus.png",
       "alt": "Flying Circus",
       "url": "https://flyingcircus.io/"
     },
-    { "image": "tweag.png", "alt": "Tweag", "url": "https://tweag.io/" },
+    {
+      "image": "tweag.png",
+      "alt": "Tweag",
+      "url": "https://tweag.io/"
+    },
     {
       "image": "detsys.svg",
       "alt": "Determinate Systems",
@@ -32,7 +44,11 @@
       "url": "https://meetwise.com/",
       "extraClasses": "py-5"
     },
-    { "image": "google.png", "alt": "Google", "url": "https://google.com/" },
+    {
+      "image": "google.png",
+      "alt": "Google",
+      "url": "https://google.com/"
+    },
     {
       "image": "wdz.png",
       "alt": "WDZ",
@@ -68,6 +84,11 @@
       "image": "oin.jpg",
       "alt": "Open Innovation Network",
       "url": "https://openinventionnetwork.com/"
+    },
+    {
+      "image": "nixcademy.svg",
+      "alt": "Nixcademy",
+      "url": "https://nixcademy.com"
     }
   ]
 }
