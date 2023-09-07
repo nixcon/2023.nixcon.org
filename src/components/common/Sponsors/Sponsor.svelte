@@ -6,9 +6,9 @@
     extraClasses = "";
 
   const sizes = {
-    gold: "w-48",
-    silver: "w-32",
-    bronze: "w-16",
+    gold: "w-56",
+    silver: "w-36",
+    bronze: "w-28",
   };
 
   if (image === undefined) throw "Image not set";
