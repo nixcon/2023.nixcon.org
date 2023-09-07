@@ -1,10 +1,12 @@
 [
   {
     "link": "https://chaos.social/@nixos_org",
-    "name": "@nixos_org@chaos.social"
+    "name": "@nixos_org@chaos.social",
+    "icon": "mastodon"
   },
   {
     "link": "https://twitter.com/nixos_org",
-    "name": "@nixos_org"
+    "name": "@nixos_org",
+    "icon": "twitter"
   }
 ]

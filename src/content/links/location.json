@@ -1,14 +1,17 @@
 [
   {
     "link": "https://www.openstreetmap.org/way/26931271#map=19/49.87717/8.65750&layers=N",
-    "name": "OpenStreetMap"
+    "name": "OpenStreetMap",
+    "icon": "map"
   },
   {
     "link": "https://goo.gl/maps/nBg35Hk9FEeNuzAd7",
-    "name": "Google Maps"
+    "name": "Google Maps",
+    "icon": "google"
   },
   {
     "link": "https://maps.apple.com/place?address=Darmstadt,%20Hesse,%20Germany&auid=3032624567994665273&ll=49.877144,8.657540&lsp=9902&q=S1%7C05%20Maschinenhaus&t=h",
-    "name": "Apple Maps"
+    "name": "Apple Maps",
+    "icon": "apple"
   }
 ]

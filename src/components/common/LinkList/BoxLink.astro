@@ -1,5 +1,11 @@
+---
+import Icon from "../Icon.astro";
+const { icon = null } = Astro.props;
+---
+
 <div class="nixcon-gradient pb-1">
-  <div class="bg-gray-100 dark:bg-nixblue-900 py-2 px-4 ">
+  <div class="bg-gray-200 dark:bg-nixblue-900 py-2 px-4 flex items-center">
+    { icon ? <Icon name={icon} extraClasses="mr-2" /> : null }
     <slot></slot>
   </div>
 </div>

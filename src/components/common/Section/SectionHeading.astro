@@ -4,7 +4,8 @@ const { extraClasses, isEmbedded, id } = Astro.props;
 const href = `#${id}`;
 ---
 
-<h2 {id} class=`text-2xl font-black mb-2 font-behrensschrift ${extraClasses}`>
+<h2 {id} class=`${isEmbedded ? "text-2xl font-bold" : "text-3xl font-black"} mb-2 font-behrensschrift ${extraClasses}`>
     { id ? ( <a class="nixcon-gradient text-transparent bg-clip-text font-black" {href}>#</a>) : null}
+    { id ? (" ") : null}
     <slot />
 </h2>
