@@ -1,0 +1,21 @@
+---
+import Section from "../common/Section/Section.astro";
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import SectionParagraph from "../common/Section/SectionParagraph.astro";
+import LinkList from "../common/LinkList/LinkList.astro";
+import { getEntry } from "astro:content";
+const { data: ticketLinks } = await getEntry('links', 'tickets');
+---
+<Section extraClasses="pb-4">
+    <SectionHeading id="tickets">Tickets</SectionHeading>
+    <SectionParagraph>
+      Tickets are all taken!<br />
+      Live streaming will be available. Follow one of the NixOS social accounts for
+      updates:
+        <LinkList links={ticketLinks} />
+    </SectionParagraph>
+    <SectionParagraph>
+      Speakers without tickets, please reach out to us at
+      <a href="mailto:orgateam@nixcon.org">orgateam@nixcon.org</a>.
+    </SectionParagraph>
+  </Section>

@@ -1,0 +1,23 @@
+---
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import Section from "../common/Section/Section.astro";
+import { getEntry } from 'astro:content';
+const { data: timelineData } = await getEntry('data', 'timeline');
+---
+
+<Section extraClasses="pb-4">
+    <SectionHeading id="timeline">Timeline</SectionHeading>
+    <div class="grid md:grid-cols-3 gap-4">
+        {timelineData.map((e) => (
+                <div class="text-md bg-gray-200 dark:bg-nixblue-800 font-black py-2 text-center rounded-md">
+                    <div class="text-lg">{e.day}</div>
+                    <div class="text-xs mb-2">{e.date}</div>
+                    <a href={e.link}>{e.name}</a>
+                </div>
+        ))}
+    </div>
+    <div class="text-sm mt-4">
+        This event is organized by the community for the community:
+        everyone is welcome to contribute.
+    </div>
+</Section>

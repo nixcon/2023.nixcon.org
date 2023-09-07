@@ -1,0 +1,24 @@
+---
+import BoxLink from "../common/LinkList/BoxLink.astro";
+import Section from "../common/Section/Section.astro";
+import SectionHeading from "../common/Section/SectionHeading.astro";
+import SectionParagraph from "../common/Section/SectionParagraph.astro";
+import LinkList from "../common/LinkList/LinkList.astro";
+import { getEntry } from "astro:content";
+const { data: locationLinks } = await getEntry('links', 'location');
+---
+
+<Section>
+  <SectionHeading id="location">Location</SectionHeading>
+  <div class="grid md:grid-cols-2">
+    <SectionParagraph>
+      <b class="inline-block mb-2">TU-Darmstadt, S1|05 Maschinenhaus</b><br />
+      Magdalenenstr. 12<br />
+      64289 Darmstadt<br />
+      Germany
+    </SectionParagraph>
+    <div>
+      <LinkList stack links={locationLinks} />
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,50 @@
+---
+import Icon from "../common/Icon.astro";
+const menuData = [
+    {
+        icon: "about",
+        link: "/#about",
+        name: "About"
+    },
+    {
+        icon: "location",
+        link: "/#location",
+        name: "Location"
+    },
+    {
+        icon: "ticket",
+        link: "/#tickets",
+        name: "Tickets"
+    },
+    {
+        icon: "timeline",
+        link: "/#timeline",
+        name: "Timeline"
+    },
+    {
+        icon: "faq",
+        link: "/#faq",
+        name: "FAQ"
+    },
+    {
+        icon: "sponsors",
+        link: "/#sponsors",
+        name: "Sponsors"
+    },
+    {
+    icon: "calendar",
+    link: "/talks",
+    name: "Schedule"
+}]
+---
+
+<div class="nixcon-gradient pb-1">
+    <div class="bg-gray-200 dark:bg-nixblue-900 py-2 px-4 flex flex-col md:flex-row justify-center gap-2">
+        {menuData.map((e) => (
+                <a href={e.link} class="no-underline hover:no-underline hover:bg-nixblue-700 py-2 md:px-2 rounded-md flex md:flex-col md:justify-center items-center transition-all duration-100 hover:text-nixblue-100">
+                    <Icon name={e.icon} />
+                    {e.name}
+                </a>
+        ))}
+    </div>
+</div>
