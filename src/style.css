@@ -17,23 +17,17 @@
     height: 100vh;
     width: 100vw;
     border-image-source: url("/site_frame.svg");
-    border-image-slice: 33.2% 46.9% 33.28%;
+    border-image-slice: 28% 46.9% 28%;
     border-image-width: 33vw;
     border-image-repeat: stretch round;
     position: absolute;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .frame {
-      border-image-source: url("/site_frame_dark.svg");
-    }
   }
 
   .content {
     position: absolute;
     width: 100vw;
     bottom: 5vh;
-    height:85vh;
+    height:90vh;
     padding: 0 12vw;
     overflow: scroll;
     mask-image: linear-gradient(
