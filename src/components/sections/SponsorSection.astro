@@ -1,6 +1,6 @@
 ---
 
-import Sponsors from "../common/Sponsors/Sponsors.astro";
+import Sponsors from "../common/Sponsors/Sponsors.svelte";
 import SubSectionHeading from "../common/Section/SubSectionHeading.astro";
 import SectionHeading from "../common/Section/SectionHeading.astro";
 import Section from "../common/Section/Section.astro";
@@ -17,7 +17,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
             Gold sponsors
         </SubSectionHeading>
         <ul class="flex flex-rows flex-wrap justify-center gap-x-16 gap-y-8 p-4">
-            <Sponsors level="gold" sponsors={sponsors.gold} />
+            <Sponsors level="gold" sponsors={sponsors.gold} client:load />
         </ul>
     </div>
     <div class="bg-nixblue-200">
@@ -27,7 +27,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
             Silver sponsors
         </SubSectionHeading>
         <ul class="flex flex-rows flex-wrap justify-center gap-x-8 gap-y-8 p-4">
-            <Sponsors level="silver" sponsors={sponsors.silver} />
+            <Sponsors level="silver" sponsors={sponsors.silver} client:load />
         </ul>
     </div>
     <div class="bg-nixblue-200">
@@ -37,7 +37,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
             Bronze sponsors
         </SubSectionHeading>
         <ul class="flex flex-rows flex-wrap justify-center gap-x-4 gap-y-4 p-4">
-            <Sponsors level="bronze" sponsors={sponsors.bronze} />
+            <Sponsors level="bronze" sponsors={sponsors.bronze} client:load />
         </ul>
     </div>
 </Section>
