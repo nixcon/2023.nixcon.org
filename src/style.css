@@ -47,3 +47,7 @@
 .talk-abstract a {
   word-break: break-all;
 }
+
+vm-player {
+  --vm-player-theme: #FF4580FF;
+}
