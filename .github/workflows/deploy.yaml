@@ -24,24 +24,22 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - uses: DeterminateSystems/nix-installer-action@v4
-      - uses: DeterminateSystems/magic-nix-cache-action@v2
-
-      - run: npm i
-
-      - name: Fetch API data
-        env:
-          PRETIX_TOKEN: ${{ secrets.PRETIX_TOKEN }}
-        run: npm run fetch-data
+      - uses: cachix/install-nix-action@v18
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Make the build unique
         run: echo "<!-- $(date +%s) -->" >> src/pages/index.astro
 
-      - name: Build
-        run: |
-          nix build
+      - uses: workflow/nix-shell-action@v3
+        with:
+          packages: nodejs
+          script: |
+            npm install
+            npm run fetch-data
+            npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: result
+          folder: dist
