@@ -1,5 +1,63 @@
 [
   {
+    "code": "TPLSLT",
+    "speakers": [],
+    "title": "NixOS Governance conversation (2nd session)",
+    "submission_type": {
+      "en": "Workshop/Training - Select this if you are planning on running a training for attendees"
+    },
+    "submission_type_id": 3115,
+    "track": null,
+    "track_id": null,
+    "state": "confirmed",
+    "abstract": "2nd session",
+    "description": "",
+    "duration": 60,
+    "slot_count": 1,
+    "do_not_record": false,
+    "is_featured": false,
+    "content_locale": "en",
+    "slot": {
+      "room_id": 2421,
+      "room": {
+        "en": "Workshop room (Room 24)"
+      },
+      "start": "2023-09-09T13:30:00+02:00",
+      "end": "2023-09-09T14:30:00+02:00"
+    },
+    "image": null,
+    "resources": []
+  },
+  {
+    "code": "AH7JSC",
+    "speakers": [],
+    "title": "NixOS Governance conversation (hackday session)",
+    "submission_type": {
+      "en": "Workshop/Training - Select this if you are planning on running a training for attendees"
+    },
+    "submission_type_id": 3115,
+    "track": null,
+    "track_id": null,
+    "state": "confirmed",
+    "abstract": "Hackday governance session",
+    "description": "",
+    "duration": 90,
+    "slot_count": 1,
+    "do_not_record": false,
+    "is_featured": false,
+    "content_locale": "en",
+    "slot": {
+      "room_id": 2421,
+      "room": {
+        "en": "Workshop room (Room 24)"
+      },
+      "start": "2023-09-10T08:30:00+02:00",
+      "end": "2023-09-10T10:00:00+02:00"
+    },
+    "image": null,
+    "resources": []
+  },
+  {
     "code": "L3QVWC",
     "speakers": [
       {
@@ -203,7 +261,7 @@
         "en": "Lecture hall (Room 122)"
       },
       "start": "2023-09-08T10:00:00+02:00",
-      "end": "2023-09-08T10:15:00+02:00"
+      "end": "2023-09-08T10:10:00+02:00"
     },
     "image": null,
     "resources": []
@@ -496,8 +554,8 @@
       "room": {
         "en": "Lecture hall (Room 122)"
       },
-      "start": "2023-09-08T14:50:00+02:00",
-      "end": "2023-09-08T15:15:00+02:00"
+      "start": "2023-09-09T10:40:00+02:00",
+      "end": "2023-09-09T11:05:00+02:00"
     },
     "image": "https://talks.nixcon.org/media/nixcon-2023/submissions/8QMELJ/logo_iLwMeDd.png",
     "resources": []
@@ -1011,8 +1069,8 @@
       "room": {
         "en": "Lecture hall (Room 122)"
       },
-      "start": "2023-09-09T10:40:00+02:00",
-      "end": "2023-09-09T11:05:00+02:00"
+      "start": "2023-09-08T14:50:00+02:00",
+      "end": "2023-09-08T15:15:00+02:00"
     },
     "image": null,
     "resources": []
@@ -1095,7 +1153,7 @@
       {
         "code": "UEAXU3",
         "name": "Sophie Tauchert",
-        "biography": "I'm working in IT-security and care a lot about privacy and data protection. To that end, I've been running and managing privacy-respecting services for multiple years now on catgirl.cloud with my entire infrastructure running on NixOS.",
+        "biography": "IT-security engineer, admin for catgirl.cloud, running NixOS everywhere and maintaining a few NixOS packages.",
         "avatar": null
       }
     ],
@@ -1229,6 +1287,42 @@
       },
       "start": "2023-09-08T14:35:00+02:00",
       "end": "2023-09-08T14:40:00+02:00"
+    },
+    "image": null,
+    "resources": []
+  },
+  {
+    "code": "QVCJ7Y",
+    "speakers": [
+      {
+        "code": "XGGYJH",
+        "name": "zimbatm",
+        "biography": null,
+        "avatar": null
+      }
+    ],
+    "title": "NixOS Governance conversation (1st session)",
+    "submission_type": {
+      "en": "Workshop/Training - Select this if you are planning on running a training for attendees"
+    },
+    "submission_type_id": 3115,
+    "track": null,
+    "track_id": null,
+    "state": "confirmed",
+    "abstract": "The question of how to more manage the project has come up once again. How do we structure ourselves to maximize participation, be effective and enjoy ourselves doing so?",
+    "description": "",
+    "duration": 60,
+    "slot_count": 1,
+    "do_not_record": false,
+    "is_featured": false,
+    "content_locale": "en",
+    "slot": {
+      "room_id": 2421,
+      "room": {
+        "en": "Workshop room (Room 24)"
+      },
+      "start": "2023-09-08T13:30:00+02:00",
+      "end": "2023-09-08T14:30:00+02:00"
     },
     "image": null,
     "resources": []

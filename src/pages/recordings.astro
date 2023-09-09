@@ -1,0 +1,41 @@
+---
+import {getEntry} from "astro:content";
+import LayoutDefault from "../layouts/LayoutDefault.astro";
+import Section from "../components/common/Section/Section.astro";
+import {marked} from 'marked';
+const {data: recordingData} = await getEntry('data', 'recordings');
+---
+
+<LayoutDefault>
+    <Section>
+        <div class="flex flex-col gap-4">
+            {recordingData.events.map((e) => (
+                    <div
+                            class="flex flex-col md:flex-row"
+                    >
+                        <img class="w-full md:w-56 object-cover" alt={e.title} src={e.thumb_url}>
+
+                        <div class="nixcon-gradient p-0.5 pt-0 md:pt-0.5 md:pl-0 w-full">
+                            <div class="dark:bg-nixblue-900 bg-gray-200 h-full flex flex-col justify-between">
+                                <div class="p-2">
+                                    <h2 class="font-bold line-clamp-1">
+                                        {e.title}
+                                    </h2>
+                                    <div class="line-clamp-2">
+                                        <p set:html={marked.parse(e.description)}/>
+                                    </div>
+                                </div>
+                                <div class="flex dark:bg-nixblue-950 bg-gray-100 p-2 flex justify-end">
+                                    <a
+                                            rel="noopener"
+                                            target="_blank"
+                                            href={e.frontend_link}>Watch Talk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </Section>
+</LayoutDefault>
+

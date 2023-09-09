@@ -9,6 +9,15 @@ function isWorkshop(talk) {
     return talk.track.en === 'Workshop';
 }
 
+async function fetchMediaCCC() {
+    let mediaCCCLink = "https://api.media.ccc.de/public/conferences/nixcon2023";
+    let response = await fetch(mediaCCCLink);
+    let data = await response.json();
+
+    writeFileSync(join(__dirname, 'src/content/data/recordings.json'), JSON.stringify(data, null, 2));
+}
+
+
 async function fetchPretalx() {
     let pretalxUrl = 'https://talks.nixcon.org/api/events/nixcon-2023/talks/';
     let result = [];
@@ -28,3 +37,4 @@ async function fetchPretalx() {
 }
 
 fetchPretalx();
+fetchMediaCCC();

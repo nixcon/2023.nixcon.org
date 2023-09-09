@@ -32,17 +32,24 @@ const menuData = [
         name: "Sponsors"
     },
     {
-    icon: "calendar",
-    link: "/talks",
-    name: "Schedule"
-}]
+        icon: "calendar",
+        link: "/talks",
+        name: "Schedule"
+    },
+    {
+        icon: "record",
+        link: "/recordings",
+        name: "Recordings"
+    }
+]
 ---
 
 <div class="nixcon-gradient pb-1">
     <div class="bg-gray-200 dark:bg-nixblue-900 py-2 px-4 flex flex-col md:flex-row justify-center gap-2">
         {menuData.map((e) => (
-                <a href={e.link} class="no-underline hover:no-underline hover:bg-nixblue-700 py-2 md:px-2 rounded-md flex md:flex-col md:justify-center items-center transition-all duration-100 hover:text-nixblue-100">
-                    <Icon name={e.icon} />
+                <a href={e.link}
+                   class="no-underline hover:no-underline hover:bg-nixblue-700 py-2 md:px-2 rounded-md flex md:flex-col md:justify-center items-center transition-all duration-100 hover:text-nixblue-100">
+                    <Icon name={e.icon}/>
                     {e.name}
                 </a>
         ))}
