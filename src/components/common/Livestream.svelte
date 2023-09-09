@@ -9,13 +9,9 @@
 </script>
 
 <Player
-        controls
-        autoplay
-        muted
 >
     <Hls version="latest" config="{hlsConfig}">
         <source data-src="https://cdn.c3voc.de/hls/s3/native_hd.m3u8" type="application/x-mpegURL" />
-        <source data-src="https://cdn.c3voc.de/hls/s3/native_sd.m3u8" type="application/x-mpegURL" />
     </Hls>
 
     <DefaultUi />
