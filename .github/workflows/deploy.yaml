@@ -33,11 +33,11 @@ jobs:
 
       - uses: workflow/nix-shell-action@v3
         with:
-          packages: nodejs
+          packages: bun
           script: |
-            npm install
-            npm run fetch-data
-            npm run build
+            bun install
+            bun run fetch-data
+            bun run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
