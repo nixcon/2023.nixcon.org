@@ -8,7 +8,7 @@
   const sizes = {
     gold: "w-56",
     silver: "w-36",
-    bronze: "h-10",
+    bronze: "h-10"
   };
 
   if (image === undefined) throw "Image not set";
