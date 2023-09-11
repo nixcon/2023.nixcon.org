@@ -10,7 +10,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
 
 <Section>
     <SectionHeading id="sponsors">Sponsors</SectionHeading>
-    <div class="bg-nixblue-200 dark:bg-nixblue-800">
+    <div class="bg-nixblue-200 dark:bg-nixblue-400">
         <SubSectionHeading
                 extraClasses="p-4 pb-2 block border-b-4 border-b-yellow-300"
         >
@@ -20,7 +20,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
             <Sponsors level="gold" sponsors={sponsors.gold} client:load />
         </ul>
     </div>
-    <div class="bg-nixblue-200 dark:bg-nixblue-800">
+    <div class="bg-nixblue-200 dark:bg-nixblue-400">
         <SubSectionHeading
                 extraClasses="p-4 pb-2 block border-b-4 border-b-gray-200"
         >
@@ -30,7 +30,7 @@ const { data: sponsors } = await getEntry('data', 'sponsors');
             <Sponsors level="silver" sponsors={sponsors.silver} client:load />
         </ul>
     </div>
-    <div class="bg-nixblue-200 dark:bg-nixblue-800">
+    <div class="bg-nixblue-200 dark:bg-nixblue-400">
         <SubSectionHeading
                 extraClasses="p-4 pb-2 block border-b-4 border-b-amber-700"
         >
